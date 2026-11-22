@@ -1,0 +1,2520 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" data-theme="screening">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishwakarma Creations — Handcrafted &amp; Unveiled | Screenwriting, Direction &amp; Script Doctoring</title>
+  <meta name="description" content="Vishwakarma Creations by Penubothu Venkat (Venkat Tej) — Screenwriting, OTT Series Architecture, Direction &amp; Script Doctoring in Hyderabad. Credits include Goodachari, Baahubali: Before the Beginning, and Parampara Seasons 1 &amp; 2." />
+
+  <!-- Editorial & Screenplay Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    if (window.tailwind) {
+      window.tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              cinzel: ['"Cinzel"', 'Georgia', 'serif'],
+              serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+              script: ['"Courier Prime"', '"Courier New"', 'monospace'],
+              sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'monospace'],
+            }
+          }
+        }
+      };
+    }
+  </script>
+
+  <style>
+    /* =========================================================================
+       1. PRESTIGE CINEMA STUDIO THEME TOKENS
+          "Screening Room" (Obsidian Dark) & "Script Paper" (Warm Ivory)
+       ========================================================================= */
+    :root,
+    [data-theme="screening"] {
+      --bg-page: #06070A;
+      --bg-surface: rgba(13, 15, 20, 0.88);
+      --bg-surface-solid: #0D0F14;
+      --bg-surface-alt: rgba(19, 22, 29, 0.86);
+      --bg-glass: rgba(8, 10, 14, 0.84);
+      --text-main: #F4EFE6;
+      --text-sec: #B9B2A6;
+      --text-mut: #7C776E;
+      --gold: #C9A255;
+      --gold-bright: #E8CA86;
+      --gold-soft: rgba(201, 162, 85, 0.13);
+      --cyan: #7CC6D4;
+      --cyan-soft: rgba(124, 198, 212, 0.12);
+      --border-sub: rgba(244, 239, 230, 0.10);
+      --border-str: rgba(201, 162, 85, 0.34);
+      --hero-vignette: radial-gradient(circle at 65% 42%, rgba(6, 7, 10, 0.35) 0%, rgba(6, 7, 10, 0.82) 60%, rgba(6, 7, 10, 0.96) 100%);
+      --bg-scrim: rgba(6, 7, 10, 0.84);
+      --shadow-card: 0 18px 46px -18px rgba(0, 0, 0, 0.72);
+    }
+
+    [data-theme="paper"] {
+      --bg-page: #F6F2EA;
+      --bg-surface: rgba(255, 253, 249, 0.92);
+      --bg-surface-solid: #FFFDF9;
+      --bg-surface-alt: rgba(240, 234, 223, 0.90);
+      --bg-glass: rgba(246, 242, 234, 0.88);
+      --text-main: #181613;
+      --text-sec: #4A453D;
+      --text-mut: #797266;
+      --gold: #9A7228;
+      --gold-bright: #845E1A;
+      --gold-soft: rgba(154, 114, 40, 0.12);
+      --cyan: #246A78;
+      --cyan-soft: rgba(36, 106, 120, 0.10);
+      --border-sub: rgba(24, 22, 19, 0.11);
+      --border-str: rgba(154, 114, 40, 0.38);
+      --hero-vignette: radial-gradient(circle at 65% 42%, rgba(246, 242, 234, 0.58) 0%, rgba(246, 242, 234, 0.88) 60%, rgba(246, 242, 234, 0.97) 100%);
+      --bg-scrim: rgba(246, 242, 234, 0.88);
+      --shadow-card: 0 14px 36px -16px rgba(24, 22, 19, 0.14);
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100dvh;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      overflow-x: hidden;
+      transition: background-color 0.45s cubic-bezier(0.22, 1, 0.36, 1), color 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    section[id] { scroll-margin-top: 84px; }
+
+    .text-main { color: var(--text-main); }
+    .text-sec { color: var(--text-sec); }
+    .text-mut { color: var(--text-mut); }
+    .text-gold { color: var(--gold); }
+    .text-gold-bright { color: var(--gold-bright); }
+    .text-cyan { color: var(--cyan); }
+    .bg-gold { background-color: var(--gold); }
+    .bg-gold-soft { background-color: var(--gold-soft); }
+    .bg-cyan-soft { background-color: var(--cyan-soft); }
+    .border-sub { border-color: var(--border-sub); }
+    .border-str { border-color: var(--border-str); }
+
+    .surface-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-sub);
+      box-shadow: var(--shadow-card);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      transition: background-color 0.35s ease, border-color 0.3s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+    }
+    .surface-card:hover {
+      border-color: rgba(201, 162, 85, 0.24);
+    }
+    .surface-alt {
+      background-color: var(--bg-surface-alt);
+      border: 1px solid var(--border-sub);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: background-color 0.35s ease, border-color 0.3s ease;
+    }
+    .cinema-header {
+      background-color: var(--bg-glass);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border-sub);
+    }
+    .cinema-input {
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      border: 1px solid var(--border-str);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .cinema-input:focus {
+      outline: none;
+      border-color: var(--gold-bright);
+      box-shadow: 0 0 0 3px var(--gold-soft);
+    }
+    .cinema-input::placeholder { color: var(--text-mut); }
+
+    /* =========================================================================
+       2. 35MM FILM GRAIN, AMBIENT PROJECTOR MOTES & SCROLL HAIRLINE
+       ========================================================================= */
+    .film-grain {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 5;
+      opacity: 0.032;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.85) 0.5px, transparent 0.5px);
+      background-size: 4px 4px;
+    }
+    [data-theme="paper"] .film-grain { opacity: 0.025; }
+
+    #projector-motes {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100dvh;
+      pointer-events: none;
+      z-index: 4;
+      opacity: 0.65;
+    }
+    [data-theme="paper"] #projector-motes { opacity: 0.35; }
+
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2px;
+      width: 0%;
+      background: linear-gradient(90deg, var(--gold), var(--gold-bright), var(--cyan));
+      z-index: 80;
+      pointer-events: none;
+      transition: width 0.08s linear;
+    }
+
+    /* =========================================================================
+       3. FULL-SCREEN 10-SECOND CINEMATIC INTRO LEAD-IN
+       ========================================================================= */
+    #cinematic-intro {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100dvh;
+      z-index: 9999;
+      background-color: #050608;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    #cinematic-intro.is-exiting {
+      opacity: 0;
+      transform: scale(1.08);
+      pointer-events: none;
+    }
+    #cinematic-intro.is-done { display: none !important; }
+    #intro-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    #intro-sim-camera {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: introCameraTour 10s ease-in-out forwards;
+      will-change: transform;
+    }
+    #intro-sim-camera.hidden { display: none !important; animation: none !important; }
+    #intro-sim-camera svg { width: 100%; height: 100%; display: block; }
+    @keyframes introCameraTour {
+      0%   { transform: scale(1.02) translate(0%, 0%); }
+      22%  { transform: scale(1.36) translate(0%, 8%); }
+      44%  { transform: scale(1.42) translate(16%, 2%); }
+      68%  { transform: scale(1.32) translate(-10%, -6%); }
+      88%  { transform: scale(1.04) translate(0%, 0%); }
+      100% { transform: scale(1.00) translate(0%, 0%); }
+    }
+
+    /* =========================================================================
+       4. SUBTLE BACKLIT STUDIO WATERMARK & HERO PARALLAX
+       ========================================================================= */
+    #persistent-logo-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    #bg-video-sim {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.22;
+      filter: saturate(0.55) contrast(1.05);
+      animation: slowEmblemBreathe 28s ease-in-out infinite;
+    }
+    [data-theme="paper"] #bg-video-sim {
+      opacity: 0.10;
+      filter: sepia(0.45) contrast(0.95);
+    }
+    #bg-video-sim svg { width: 100%; height: 100%; display: block; }
+    .bg-scrim-layer {
+      position: absolute;
+      inset: 0;
+      background: var(--bg-scrim);
+      transition: background 0.45s ease;
+    }
+    @keyframes slowEmblemBreathe {
+      0%, 100% { transform: scale(1.03) translate(0%, 0%); }
+      50%      { transform: scale(1.10) translate(-1.5%, -1%); }
+    }
+
+    #hero-emblem-backdrop {
+      position: absolute;
+      inset: -3%;
+      pointer-events: none;
+      opacity: 0.34;
+      filter: saturate(0.75);
+      transition: opacity 0.6s ease, filter 0.6s ease;
+      will-change: transform;
+    }
+    [data-theme="paper"] #hero-emblem-backdrop { opacity: 0.16; }
+    #hero-emblem-backdrop svg { width: 100%; height: 100%; display: block; }
+    .hero-vignette {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: var(--hero-vignette);
+      transition: opacity 0.55s ease, background 0.45s ease;
+    }
+    body.crest-focus #hero-emblem-backdrop {
+      opacity: 0.96 !important;
+      filter: saturate(1.05) !important;
+    }
+    body.crest-focus .hero-vignette { opacity: 0.12 !important; }
+    body.crest-focus #hero-foreground { opacity: 0.08; pointer-events: none; }
+
+    .viewfinder-tick {
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      pointer-events: none;
+      border-color: var(--border-str);
+      opacity: 0.65;
+    }
+
+    @keyframes spinCW { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes spinCCW { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
+    @keyframes pulseCyan { 0%, 100% { opacity: 0.68; } 50% { opacity: 1; } }
+    @keyframes flickerFlame { 0%, 100% { transform: scaleY(1); opacity: 0.92; } 50% { transform: scaleY(1.09); opacity: 1; } }
+    .gear-cw { transform-box: fill-box; transform-origin: center; animation: spinCW 28s linear infinite; }
+    .gear-ccw { transform-box: fill-box; transform-origin: center; animation: spinCCW 22s linear infinite; }
+    .cyan-pulse { animation: pulseCyan 3.2s ease-in-out infinite; }
+    .flame-flicker { transform-box: fill-box; transform-origin: bottom center; animation: flickerFlame 1.5s ease-in-out infinite; }
+
+    /* =========================================================================
+       5. VISHWAKARMA ARCHITECT'S HAMMER & COMPASS CURSOR (DESKTOP ONLY)
+       ========================================================================= */
+    #vk-cursor, #vk-cursor-ring { display: none; }
+    @media (hover: hover) and (pointer: fine) {
+      body.has-vk-cursor,
+      body.has-vk-cursor a,
+      body.has-vk-cursor button,
+      body.has-vk-cursor [role="button"],
+      body.has-vk-cursor select,
+      body.has-vk-cursor input,
+      body.has-vk-cursor textarea {
+        cursor: none;
+      }
+      #vk-cursor {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        pointer-events: none;
+        z-index: 10002;
+        transform: translate3d(-100px, -100px, 0);
+        will-change: transform;
+      }
+      #vk-hammer-svg {
+        width: 30px;
+        height: 30px;
+        transform-origin: 24% 82%;
+        transition: transform 0.14s cubic-bezier(0.22, 1, 0.36, 1), filter 0.2s ease;
+        filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.55));
+      }
+      #vk-cursor.is-hovering #vk-hammer-svg {
+        transform: rotate(-14deg) scale(1.1);
+        filter: drop-shadow(0 0 8px rgba(232, 202, 134, 0.55));
+      }
+      #vk-cursor.is-striking #vk-hammer-svg {
+        transform: rotate(-52deg) scale(1.04);
+      }
+      #vk-cursor-ring {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 38px;
+        height: 38px;
+        border-radius: 9999px;
+        border: 1px solid rgba(201, 162, 85, 0.38);
+        pointer-events: none;
+        z-index: 10001;
+        transform: translate3d(-100px, -100px, 0);
+        transition: width 0.24s ease, height 0.24s ease, background-color 0.24s ease, border-color 0.24s ease;
+      }
+      #vk-cursor-ring.is-labeled {
+        width: 72px;
+        height: 72px;
+        background-color: rgba(201, 162, 85, 0.16);
+        border-color: var(--gold-bright);
+        backdrop-filter: blur(2px);
+      }
+      #vk-cursor-label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 8.5px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        color: var(--gold-bright);
+        opacity: 0;
+        transform: translateY(22px);
+        transition: opacity 0.2s ease;
+      }
+      #vk-cursor-ring.is-labeled #vk-cursor-label { opacity: 1; }
+    }
+
+    .vk-spark {
+      position: fixed;
+      pointer-events: none;
+      z-index: 10003;
+      border-radius: 9999px;
+      animation: vkSparkBurst 0.52s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes vkSparkBurst {
+      0%   { transform: translate(0, 0) scale(1); opacity: 1; }
+      100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; }
+    }
+    .vk-shockwave {
+      position: fixed;
+      pointer-events: none;
+      z-index: 10000;
+      width: 14px;
+      height: 14px;
+      margin-left: -7px;
+      margin-top: -7px;
+      border-radius: 9999px;
+      border: 1.5px solid var(--gold-bright);
+      animation: vkShock 0.45s ease-out forwards;
+    }
+    @keyframes vkShock {
+      0%   { transform: scale(0.4); opacity: 0.9; }
+      100% { transform: scale(3.2); opacity: 0; }
+    }
+
+    /* =========================================================================
+       6. BANNER MARQUEE & 3D-TILT POSTER CARDS
+       ========================================================================= */
+    .banner-marquee-wrap {
+      overflow: hidden;
+      mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    }
+    .banner-marquee-track {
+      display: flex;
+      gap: 1.25rem;
+      width: max-content;
+      animation: bannerScroll 36s linear infinite;
+    }
+    .banner-marquee-wrap:hover .banner-marquee-track {
+      animation-play-state: paused;
+    }
+    @keyframes bannerScroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .poster-tilt-card {
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease, box-shadow 0.35s ease;
+      will-change: transform;
+    }
+    .poster-sheen {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(232, 202, 134, 0.24), transparent 58%);
+    }
+    .poster-tilt-card:hover .poster-sheen { opacity: 1; }
+
+    /* =========================================================================
+       7. EDITORIAL REVEAL, KINETIC ROLL, MENU & INTERACTIVE ROWS
+       ========================================================================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.in-view { opacity: 1; transform: translateY(0); }
+
+    .kinetic-wrap { display: inline-flex; overflow: hidden; line-height: 1.25; vertical-align: middle; }
+    .kinetic-char { display: inline-block; position: relative; transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1); }
+    .kinetic-char::after { content: attr(data-char); position: absolute; left: 0; top: 115%; width: 100%; height: 100%; }
+    .kinetic-trigger:hover .kinetic-char { transform: translateY(-115%); }
+
+    #editorial-menu {
+      opacity: 0;
+      pointer-events: none;
+      clip-path: inset(0 0 100% 0);
+      transition: clip-path 0.55s cubic-bezier(0.76, 0, 0.24, 1), opacity 0.35s ease;
+    }
+    #editorial-menu.is-open { opacity: 1; pointer-events: all; clip-path: inset(0 0 0% 0); }
+
+    .craft-row {
+      border-bottom: 1px solid var(--border-sub);
+      transition: padding-left 0.3s ease, background-color 0.25s ease, border-color 0.25s ease;
+    }
+    .craft-row:hover, .craft-row.is-active {
+      padding-left: 1rem;
+      background-color: var(--gold-soft);
+      border-bottom-color: var(--gold);
+    }
+
+    .scene-beat {
+      border-left: 2px solid transparent;
+      transition: background-color 0.25s ease, border-color 0.25s ease;
+    }
+    .scene-beat:hover, .scene-beat.is-active {
+      background-color: var(--gold-soft);
+      border-left-color: var(--gold-bright);
+    }
+  </style>
+</head>
+<body class="antialiased pb-20 md:pb-0">
+
+  <!-- 35mm Subtle Grain, Ambient Projector Motes & Scroll Progress -->
+  <div class="film-grain" aria-hidden="true"></div>
+  <canvas id="projector-motes" aria-hidden="true"></canvas>
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Vishwakarma Architect's Hammer Cursor -->
+  <div id="vk-cursor-ring" aria-hidden="true"><span id="vk-cursor-label">VIEW</span></div>
+  <div id="vk-cursor" aria-hidden="true">
+    <svg id="vk-hammer-svg" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="vk-h-gold" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#FFF0C2"/>
+          <stop offset="50%" stop-color="#C9A255"/>
+          <stop offset="100%" stop-color="#785318"/>
+        </linearGradient>
+      </defs>
+      <!-- Sculpted Handle -->
+      <path d="M8 29 L19 18" stroke="url(#vk-h-gold)" stroke-width="2.6" stroke-linecap="round"/>
+      <circle cx="7.5" cy="29.5" r="2.1" fill="#E8CA86" stroke="#06070A" stroke-width="0.8"/>
+      <!-- Ornate Vishwakarma Hammer Head -->
+      <path d="M13 10.5 L21.5 5.5 L29.5 13.5 L24.5 22 L13 10.5 Z" fill="url(#vk-h-gold)" stroke="#06070A" stroke-width="1"/>
+      <!-- Glowing Cyan Diamond Core on Hammer Head -->
+      <polygon points="21.2,11.2 23.6,13.6 21.2,16.1 18.8,13.6" fill="#9AE6F5" stroke="#FFFFFF" stroke-width="0.7"/>
+    </svg>
+  </div>
+
+  <!-- Hidden Single-Track Ambient Audio (Optional bg-music.mp3 fallback to built-in Dwarven Bass-Chorus) -->
+  <audio id="bg-music-el" loop preload="none" class="hidden">
+    <source src="bg-music.mp3" type="audio/mpeg" />
+    <source src="bg-music.ogg" type="audio/ogg" />
+  </audio>
+
+  <!-- =========================================================================
+       FULL-SCREEN 10-SECOND CINEMATIC INTRO LEAD-IN
+       ========================================================================= -->
+  <div id="cinematic-intro" onclick="handleIntroStageClick(event)" data-cursor="SKIP" role="dialog" aria-label="Vishwakarma Creations Intro">
+    <video id="intro-video" class="hidden" muted playsinline preload="auto">
+      <source src="HD-NOWATERMARK_gemini_generated_video_95410b73.mp4" type="video/mp4" />
+      <source src="intro-video.mp4" type="video/mp4" />
+    </video>
+
+    <div id="intro-sim-camera">
+      <div id="intro-emblem-mount" class="w-full h-full"></div>
+    </div>
+
+    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-black/90 via-black/45 to-transparent"></div>
+
+    <div class="absolute inset-x-0 bottom-0 p-5 sm:p-8 z-20 flex flex-col gap-3" onclick="event.stopPropagation()">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <div class="space-y-1">
+          <div class="font-mono text-[10px] uppercase tracking-[0.26em] text-[#E8CA86]">Vishwakarma Creations · Hyderabad</div>
+          <div id="intro-caption" class="font-serif text-lg sm:text-xl italic text-[#F4EFE6]/90">Handcrafted &amp; Unveiled — Entering the Studio…</div>
+        </div>
+
+        <div class="flex items-center gap-2.5">
+          <button type="button" onclick="toggleFullscreenMode()" data-cursor="FULL"
+                  class="px-3.5 py-2 rounded-full border border-white/25 bg-black/50 hover:border-[#E8CA86] text-[11px] font-mono uppercase tracking-wider text-white/90 transition">
+            ⛶ Fullscreen
+          </button>
+          <button type="button" onclick="skipCinematicIntro()" data-cursor="ENTER"
+                  class="px-5 py-2 rounded-full bg-[#C9A255] hover:bg-[#E8CA86] text-[#06070A] text-[11px] font-mono font-bold uppercase tracking-wider transition">
+            Enter Website →
+          </button>
+        </div>
+      </div>
+
+      <div class="w-full h-[2px] bg-white/15 rounded-full overflow-hidden">
+        <div id="intro-progress-bar" class="h-full bg-gradient-to-r from-[#C9A255] via-[#E8CA86] to-[#7CC6D4]" style="width: 0%;"></div>
+      </div>
+      <div class="flex items-center justify-between font-mono text-[10px] text-white/50">
+        <span>CLICK ANYWHERE TO ENTER</span>
+        <span id="intro-timer-label">00:00 / 00:10</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       PERSISTENT SUBTLE STUDIO WATERMARK BACKGROUND
+       ========================================================================= -->
+  <div id="persistent-logo-bg" aria-hidden="true">
+    <div id="bg-video-sim"></div>
+    <div class="bg-scrim-layer"></div>
+  </div>
+
+  <!-- =========================================================================
+       CLEAN THEATRICAL TOP HEADER (WITH INTRO-DERIVED BANNER CREST)
+       ========================================================================= -->
+  <header class="fixed top-0 inset-x-0 z-[70] cinema-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-[76px] flex items-center justify-between gap-3">
+      <!-- Intro-Derived Vishwakarma Creations Banner Logo -->
+      <button type="button" onclick="navigateToSection('top')" data-cursor="TOP" class="flex items-center gap-3 text-left group focus:outline-none">
+        <div class="w-11 h-11 rounded-xl border border-str bg-gold-soft flex items-center justify-center shrink-0 overflow-hidden transition group-hover:border-[var(--gold-bright)] group-hover:scale-105">
+          <svg class="w-10 h-10" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="hdr-gold" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#F6DE9D"/>
+                <stop offset="55%" stop-color="#C9A255"/>
+                <stop offset="100%" stop-color="#6F4D16"/>
+              </linearGradient>
+            </defs>
+            <!-- Subtle Rotating Gear Halo from Intro -->
+            <circle cx="32" cy="32" r="26" stroke="url(#hdr-gold)" stroke-width="2.6" stroke-dasharray="4.5 3.5" class="gear-cw" opacity="0.72"/>
+            <!-- Crown Silhouette -->
+            <path d="M26 16 L32 8 L38 16 Z" fill="url(#hdr-gold)"/>
+            <!-- Glowing Cyan Diamond Core -->
+            <polygon points="32,16.5 37.5,22 32,27.8 26.5,22" fill="#9AE6F5" stroke="#FFFFFF" stroke-width="0.9" class="cyan-pulse"/>
+            <!-- Sculpted Shield -->
+            <path d="M18 27 L32 23.5 L46 27 V38.5 C46 47 38.5 52.5 32 55 C25.5 52.5 18 47 18 38.5 Z" fill="#130E08" stroke="url(#hdr-gold)" stroke-width="2"/>
+            <text x="32" y="42.5" text-anchor="middle" fill="#F4DF9E" font-family="Cinzel,Georgia,serif" font-size="11.5" font-weight="700" letter-spacing="1">VC</text>
+            <!-- Miniature Ribbon -->
+            <path d="M14 55 Q32 60 50 55" stroke="url(#hdr-gold)" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="leading-tight">
+          <div class="font-cinzel text-sm sm:text-base font-bold tracking-[0.14em] text-main">VISHWAKARMA CREATIONS</div>
+          <div class="font-mono text-[9px] uppercase tracking-[0.22em] text-mut mt-0.5">Handcrafted &amp; Unveiled</div>
+        </div>
+      </button>
+
+      <!-- Borderless Editorial Navigation -->
+      <nav class="hidden lg:flex items-center gap-6 text-xs font-mono uppercase tracking-[0.14em] text-sec" aria-label="Primary Navigation">
+        <button type="button" onclick="navigateToSection('posters')" data-cursor="POSTERS" class="hover:text-gold-bright transition">Posters</button>
+        <button type="button" onclick="navigateToSection('vedic-ethos')" data-cursor="ETHOS" class="hover:text-gold-bright transition">Ethos</button>
+        <button type="button" onclick="navigateToSection('career')" data-cursor="CREDITS" class="hover:text-gold-bright transition">Filmography</button>
+        <button type="button" onclick="navigateToSection('craft')" data-cursor="CRAFT" class="hover:text-gold-bright transition">Services</button>
+        <button type="button" onclick="navigateToSection('script-lab')" data-cursor="LAB" class="hover:text-gold-bright transition">Script Lab</button>
+      </nav>
+
+      <!-- Right Actions -->
+      <div class="flex items-center gap-2 sm:gap-2.5">
+        <button type="button" onclick="toggleTheme()" id="theme-toggle-btn" data-cursor="THEME"
+                class="inline-flex items-center gap-1.5 px-3 py-2 rounded-full border border-sub hover:border-str text-[11px] font-mono text-sec hover:text-main transition">
+          <span id="theme-dot" class="w-2 h-2 rounded-full bg-gold"></span>
+          <span id="theme-label" class="hidden sm:inline">Script Paper</span>
+        </button>
+
+        <button type="button" onclick="toggleFullscreenMode()" data-cursor="FULL" aria-label="Toggle Fullscreen"
+                class="hidden sm:inline-flex items-center justify-center w-9 h-9 rounded-full border border-sub hover:border-str text-xs font-mono text-sec hover:text-main transition">
+          ⛶
+        </button>
+
+        <button type="button" onclick="openPitchModal()" data-cursor="ENQUIRE"
+                class="kinetic-trigger hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold hover:bg-[#E8CA86] text-[#06070A] text-xs font-mono font-bold uppercase tracking-wider transition">
+          <span class="kinetic-text">Project Enquiry</span>
+        </button>
+
+        <button type="button" onclick="toggleEditorialMenu()" id="menu-btn" data-cursor="MENU"
+                class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-str text-[11px] font-mono uppercase tracking-[0.14em] text-main hover:border-[var(--gold-bright)] transition">
+          <span id="menu-btn-text">Menu</span>
+          <span class="flex flex-col gap-1 w-3.5">
+            <span id="mb-1" class="block h-[1.5px] w-full bg-current transition-transform duration-300"></span>
+            <span id="mb-2" class="block h-[1.5px] w-full bg-current transition-transform duration-300"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       FULL-SCREEN EDITORIAL MENU OVERLAY
+       ========================================================================= -->
+  <div id="editorial-menu" class="fixed inset-0 z-[65] pt-24 pb-10 px-6 sm:px-12 overflow-y-auto" style="background-color: var(--bg-page);">
+    <div class="max-w-7xl mx-auto min-h-full flex flex-col justify-between gap-10">
+      <div class="grid lg:grid-cols-12 gap-10 pt-4">
+        <div class="lg:col-span-7 space-y-2">
+          <div class="font-mono text-[10px] uppercase tracking-[0.24em] text-gold mb-4">Studio Index</div>
+          <button type="button" onclick="menuJump('top')" class="w-full flex items-baseline gap-5 py-3 border-b border-sub text-left group">
+            <span class="font-mono text-xs text-gold">01</span>
+            <span class="font-serif text-3xl sm:text-5xl text-main group-hover:text-gold-bright transition">Screening Room Home</span>
+          </button>
+          <button type="button" onclick="menuJump('posters')" class="w-full flex items-baseline gap-5 py-3 border-b border-sub text-left group">
+            <span class="font-mono text-xs text-gold">02</span>
+            <span class="font-serif text-3xl sm:text-5xl text-main group-hover:text-gold-bright transition">Banners &amp; Poster Showcase</span>
+          </button>
+          <button type="button" onclick="menuJump('vedic-ethos')" class="w-full flex items-baseline gap-5 py-3 border-b border-sub text-left group">
+            <span class="font-mono text-xs text-gold">03</span>
+            <span class="font-serif text-3xl sm:text-5xl text-main group-hover:text-gold-bright transition">The Vishwakarma Ethos</span>
+          </button>
+          <button type="button" onclick="menuJump('career')" class="w-full flex items-baseline gap-5 py-3 border-b border-sub text-left group">
+            <span class="font-mono text-xs text-gold">04</span>
+            <span class="font-serif text-3xl sm:text-5xl text-main group-hover:text-gold-bright transition">Profile, Filmography &amp; Awards</span>
+          </button>
+          <button type="button" onclick="menuJump('craft')" class="w-full flex items-baseline gap-5 py-3 border-b border-sub text-left group">
+            <span class="font-mono text-xs text-gold">05</span>
+            <span class="font-serif text-3xl sm:text-5xl text-main group-hover:text-gold-bright transition">Creative Services (01–06)</span>
+          </button>
+          <button type="button" onclick="menuJump('script-lab')" class="w-full flex items-baseline gap-5 py-3 border-b border-sub text-left group">
+            <span class="font-mono text-xs text-gold">06</span>
+            <span class="font-serif text-3xl sm:text-5xl text-main group-hover:text-gold-bright transition">Script Doctor Lab &amp; Scene Anatomy</span>
+          </button>
+        </div>
+
+        <div class="lg:col-span-5 space-y-5 lg:pt-8">
+          <div class="surface-card rounded-3xl p-6 space-y-4">
+            <div class="font-mono text-[10px] uppercase tracking-[0.2em] text-gold-bright">Proprietor &amp; Principal Architect</div>
+            <div class="font-serif text-3xl text-main">Penubothu Venkat <span class="italic text-sec text-xl">(Venkat Tej)</span></div>
+            <p class="text-xs sm:text-sm text-sec leading-relaxed">
+              Screenwriter, Director &amp; Script Doctor · SWA Life Member #51352 · Hyderabad, Telangana.
+            </p>
+            <div class="space-y-1.5 font-mono text-xs text-sec pt-1">
+              <div>Mobile / WhatsApp: <a href="tel:+917989953118" class="text-gold-bright hover:underline">+91 79899 53118</a></div>
+              <div>Alternate: <a href="tel:+919491584689" class="text-main hover:underline">+91 94915 84689</a></div>
+              <div>Email: <a href="mailto:venkat.penubothu@gmail.com" class="text-cyan hover:underline">venkat.penubothu@gmail.com</a></div>
+            </div>
+            <button type="button" onclick="toggleEditorialMenu(); openPitchModal();"
+                    class="w-full py-3 rounded-full bg-gold text-[#06070A] font-mono text-xs font-bold uppercase tracking-wider">
+              Enquire / Commission Work →
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-6 border-t border-sub flex flex-wrap justify-between gap-3 font-mono text-[11px] text-mut">
+        <span>VISHWAKARMA CREATIONS · HYDERABAD, INDIA</span>
+        <span>SWA #51352 · ALL ENQUIRIES NDA-PROTECTED</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MAIN CONTENT
+       ========================================================================= -->
+  <main class="relative z-10">
+
+    <!-- =====================================================================
+         PAGE 1: PRESTIGE CINEMA STUDIO HERO (DYNAMIC PARALLAX + LIVE SCRIPT CARD)
+         ===================================================================== -->
+    <section id="top" class="relative min-h-[100dvh] flex items-center pt-24 pb-16 overflow-hidden border-b border-sub">
+      <div id="hero-emblem-backdrop" aria-hidden="true"></div>
+      <div class="hero-vignette" aria-hidden="true"></div>
+
+      <div class="hidden md:block viewfinder-tick top-24 left-8 border-t border-l"></div>
+      <div class="hidden md:block viewfinder-tick top-24 right-8 border-t border-r"></div>
+      <div class="hidden md:block viewfinder-tick bottom-8 left-8 border-b border-l"></div>
+      <div class="hidden md:block viewfinder-tick bottom-8 right-8 border-b border-r"></div>
+
+      <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-10">
+          <div class="inline-flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-mut">
+            <span class="inline-flex items-center gap-1.5 text-gold-bright">
+              <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+              REC · 24 FPS
+            </span>
+            <span>|</span>
+            <span>2.39:1 ANAMORPHIC</span>
+            <span class="hidden sm:inline">|</span>
+            <span class="hidden sm:inline">SWA #51352 · HYDERABAD</span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button type="button" onclick="replayCinematicIntro()" data-cursor="PLAY"
+                    class="px-3.5 py-1.5 rounded-full border border-sub hover:border-str surface-alt text-[10px] font-mono uppercase tracking-wider text-sec hover:text-main transition">
+              ▶ Replay Intro
+            </button>
+            <button type="button" id="crest-toggle-btn" onclick="toggleCrestFocus()" data-cursor="CREST"
+                    class="px-3.5 py-1.5 rounded-full border border-sub hover:border-str surface-alt text-[10px] font-mono uppercase tracking-wider text-sec hover:text-main transition">
+              View Studio Crest
+            </button>
+          </div>
+        </div>
+
+        <div id="hero-foreground" class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center transition-opacity duration-500">
+          <!-- Left: Immediate Filmmaker Positioning -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="font-mono text-[11px] uppercase tracking-[0.24em] text-gold-bright">
+              Penubothu Venkat (Venkat Tej) · Screenwriter, Director &amp; Script Doctor
+            </div>
+
+            <h1 class="font-serif text-5xl sm:text-6xl lg:text-[4.65rem] font-medium text-main leading-[1.03] tracking-tight">
+              Stories Architected for the <em class="italic text-gold-bright font-normal">Big Screen.</em>
+            </h1>
+
+            <p class="text-sm sm:text-base text-sec leading-relaxed max-w-2xl">
+              Inspired by <strong class="text-main font-semibold">Lord Vishwakarma</strong>—the Vedic architect of worlds—Vishwakarma Creations crafts theatrical screenplays, OTT series bibles, and surgical script rewrites for Telugu and pan-Indian cinema.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-2 pt-1 font-mono text-[11px]">
+              <button type="button" onclick="openDossierModal('goodachari')" data-cursor="DOSSIER" class="px-3 py-1.5 rounded-full surface-alt text-main border border-sub hover:border-str transition">Goodachari (2018)</button>
+              <button type="button" onclick="openDossierModal('baahubali')" data-cursor="DOSSIER" class="px-3 py-1.5 rounded-full surface-alt text-main border border-sub hover:border-str transition">Baahubali: Before the Beginning</button>
+              <button type="button" onclick="openDossierModal('parampara')" data-cursor="DOSSIER" class="px-3 py-1.5 rounded-full surface-alt text-main border border-sub hover:border-str transition">Parampara S1 &amp; S2</button>
+              <button type="button" onclick="navigateToSection('career'); switchProfileTab('awards');" data-cursor="AWARDS" class="px-3 py-1.5 rounded-full bg-gold-soft text-gold-bright border border-str transition">10 International Screenplay Wins</button>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3.5 pt-3">
+              <button type="button" onclick="openPitchModal()" data-cursor="ENQUIRE"
+                      class="kinetic-trigger inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-gold hover:bg-[#E8CA86] text-[#06070A] text-xs font-mono font-bold uppercase tracking-wider transition shadow-lg">
+                <span class="kinetic-text">Enquire / Commission Work</span>
+                <span>→</span>
+              </button>
+              <button type="button" onclick="navigateToSection('posters')" data-cursor="POSTERS"
+                      class="kinetic-trigger inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full border border-str hover:border-[var(--gold-bright)] surface-alt text-main text-xs font-mono font-semibold uppercase tracking-wider transition">
+                <span class="kinetic-text">Explore Posters &amp; Credits</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Live Interactive Screenplay Beat Switcher -->
+          <div class="lg:col-span-5">
+            <div class="surface-card rounded-[2rem] p-6 sm:p-7 space-y-5 border-str">
+              <div class="flex items-center justify-between border-b border-sub pb-3.5">
+                <div>
+                  <div class="font-mono text-[10px] uppercase tracking-[0.22em] text-gold-bright">From the Writers' Desk</div>
+                  <div id="hero-beat-meta" class="font-mono text-[10px] text-mut mt-0.5">DRAFT · ESPIONAGE THRILLER</div>
+                </div>
+                <div class="flex items-center gap-1" id="hero-beat-tabs">
+                  <button type="button" onclick="selectHeroBeat(0)" class="hero-beat-btn px-2 py-1 rounded-full font-mono text-[9px] bg-gold text-[#06070A] font-bold">THRILLER</button>
+                  <button type="button" onclick="selectHeroBeat(1)" class="hero-beat-btn px-2 py-1 rounded-full font-mono text-[9px] surface-alt text-sec">EPIC</button>
+                  <button type="button" onclick="selectHeroBeat(2)" class="hero-beat-btn px-2 py-1 rounded-full font-mono text-[9px] surface-alt text-sec">DRAMA</button>
+                </div>
+              </div>
+
+              <div id="hero-beat-body" class="font-script text-xs sm:text-[13px] leading-relaxed space-y-3 text-sec p-4 rounded-2xl surface-alt min-h-[195px] transition-opacity duration-300">
+                <!-- Populated dynamically -->
+              </div>
+
+              <div class="grid grid-cols-2 gap-3 pt-1 font-mono text-[11px]">
+                <a href="tel:+917989953118" data-cursor="CALL" class="surface-alt rounded-xl p-3 hover:border-str transition">
+                  <div class="text-[9px] uppercase tracking-wider text-mut">Direct / WhatsApp</div>
+                  <div class="text-main font-semibold mt-0.5">+91 79899 53118</div>
+                </a>
+                <a href="mailto:venkat.penubothu@gmail.com" data-cursor="MAIL" class="surface-alt rounded-xl p-3 hover:border-str transition truncate">
+                  <div class="text-[9px] uppercase tracking-wider text-mut">Studio Desk</div>
+                  <div class="text-cyan font-semibold mt-0.5 truncate">venkat.penubothu@gmail.com</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 1A: BANNER LOGOS WORKED (SUBTLE CINEMA MARQUEE)
+         ===================================================================== -->
+    <section id="banners" class="py-12 border-b border-sub surface-alt">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <div class="font-mono text-[10px] uppercase tracking-[0.26em] text-gold-bright">Production Banners &amp; Streaming Platforms Collaborated</div>
+          <div class="font-mono text-[10px] text-mut">Click any banner to filter credits</div>
+        </div>
+
+        <div class="banner-marquee-wrap">
+          <div id="banner-marquee-track" class="banner-marquee-track">
+            <!-- Populated cleanly via JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 1B: SERIES & FILM POSTERS WORKED (3D-TILT GALLERY)
+         ===================================================================== -->
+    <section id="posters" class="py-20 lg:py-24 border-b border-sub">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 reveal">
+          <div>
+            <div class="font-mono text-[11px] uppercase tracking-[0.22em] text-gold-bright">Selected Theatrical &amp; OTT Key Art</div>
+            <h2 class="font-serif text-4xl sm:text-5xl font-medium text-main mt-2">Series &amp; Film Posters Worked</h2>
+          </div>
+          <p class="text-sm text-sec max-w-md">Hover to inspect in 3D projector light, or click any poster to open its full Production Dossier.</p>
+        </div>
+
+        <div id="poster-gallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
+          <!-- Populated cleanly via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 2: THE VISHWAKARMA ETHOS (VEDIC ARCHITECTURE -> CINEMA)
+         ===================================================================== -->
+    <section id="vedic-ethos" class="py-20 lg:py-28 border-b border-sub">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+        <div class="grid lg:grid-cols-12 gap-8 items-end reveal">
+          <div class="lg:col-span-7 space-y-4">
+            <div class="font-mono text-[11px] uppercase tracking-[0.24em] text-gold-bright">विश्वकर्मणे नमः · Rigveda 10.81 · Sthapatya Veda</div>
+            <h2 class="font-serif text-4xl sm:text-5xl font-medium text-main leading-[1.08]">
+              The Vishwakarma Ethos: <em class="italic text-gold-bright font-normal">Architecting Worlds for Cinema.</em>
+            </h2>
+          </div>
+          <div class="lg:col-span-5">
+            <p class="text-sm text-sec leading-relaxed border-l border-str pl-5">
+              In Indian Vedic literature, <strong class="text-main">Lord Vishwakarma</strong> is the cosmic architect of <em class="text-main">Dwarka</em> and <em class="text-main">Indraprastha</em>—master of proportion, illusion, and enduring form. We carry that exact discipline into modern screenwriting and direction.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 reveal">
+          <div class="surface-card rounded-3xl p-6 space-y-3 hover:-translate-y-1">
+            <div class="flex items-center justify-between font-mono text-[11px]">
+              <span class="text-gold-bright">01 · STHAPATYA</span>
+              <span class="text-mut">PROPORTION</span>
+            </div>
+            <h3 class="font-serif text-2xl font-semibold text-main">Structural Architecture</h3>
+            <p class="text-xs sm:text-sm text-sec leading-relaxed">
+              Every screenplay is engineered with mathematical act-breaks, escalating stakes, and emotional symmetry before a single camera rolls.
+            </p>
+            <div class="pt-2 font-mono text-[10px] uppercase tracking-wider text-cyan">→ Feature Screenplays</div>
+          </div>
+
+          <div class="surface-card rounded-3xl p-6 space-y-3 hover:-translate-y-1">
+            <div class="flex items-center justify-between font-mono text-[11px]">
+              <span class="text-gold-bright">02 · INDRAPRASTHA</span>
+              <span class="text-mut">WORLD-BUILDING</span>
+            </div>
+            <h3 class="font-serif text-2xl font-semibold text-main">Mythic &amp; Grounded Worlds</h3>
+            <p class="text-xs sm:text-sm text-sec leading-relaxed">
+              From sprawling period kingdoms to contemporary espionage networks, we build lived-in universes designed to sustain multi-season OTT arcs.
+            </p>
+            <div class="pt-2 font-mono text-[10px] uppercase tracking-wider text-cyan">→ OTT Series Bibles</div>
+          </div>
+
+          <div class="surface-card rounded-3xl p-6 space-y-3 hover:-translate-y-1">
+            <div class="flex items-center justify-between font-mono text-[11px]">
+              <span class="text-gold-bright">03 · PURIFICATION</span>
+              <span class="text-mut">REFINEMENT</span>
+            </div>
+            <h3 class="font-serif text-2xl font-semibold text-main">Surgical Script Doctoring</h3>
+            <p class="text-xs sm:text-sm text-sec leading-relaxed">
+              Like refining raw ore into clarity, we diagnose second-act sag, sharpen character motivation, and elevate subtext while protecting the director's voice.
+            </p>
+            <div class="pt-2 font-mono text-[10px] uppercase tracking-wider text-cyan">→ Script Diagnostics</div>
+          </div>
+
+          <div class="surface-card rounded-3xl p-6 space-y-3 hover:-translate-y-1">
+            <div class="flex items-center justify-between font-mono text-[11px]">
+              <span class="text-gold-bright">04 · SŪTRADHĀRA</span>
+              <span class="text-mut">AUTHORSHIP</span>
+            </div>
+            <h3 class="font-serif text-2xl font-semibold text-main">From Page to Final Cut</h3>
+            <p class="text-xs sm:text-sm text-sec leading-relaxed">
+              Rooted in on-set associate direction and writers' room leadership, we translate literary nuance into visual blocking, rhythm, and performance.
+            </p>
+            <div class="pt-2 font-mono text-[10px] uppercase tracking-wider text-cyan">→ Direction &amp; Supervision</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 3: 3-TAB EXECUTIVE PORTFOLIO HUB (PROFILE, FILMOGRAPHY, AWARDS)
+         ===================================================================== -->
+    <section id="career" class="py-20 lg:py-28 border-b border-sub">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 reveal">
+          <div>
+            <div class="font-mono text-[11px] uppercase tracking-[0.22em] text-gold-bright">Executive Portfolio</div>
+            <h2 class="font-serif text-4xl sm:text-5xl font-medium text-main mt-2">Penubothu Venkat <span class="italic text-sec text-3xl">(Venkat Tej)</span></h2>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div class="surface-card rounded-2xl px-4 py-3 text-center">
+              <div class="font-serif text-2xl sm:text-3xl font-semibold text-gold-bright">2014+</div>
+              <div class="font-mono text-[9px] uppercase tracking-wider text-mut">Active Since</div>
+            </div>
+            <div class="surface-card rounded-2xl px-4 py-3 text-center">
+              <div class="font-serif text-2xl sm:text-3xl font-semibold text-main">11+</div>
+              <div class="font-mono text-[9px] uppercase tracking-wider text-mut">Film &amp; OTT Credits</div>
+            </div>
+            <div class="surface-card rounded-2xl px-4 py-3 text-center">
+              <div class="font-serif text-2xl sm:text-3xl font-semibold text-cyan">10</div>
+              <div class="font-mono text-[9px] uppercase tracking-wider text-mut">Festival Wins</div>
+            </div>
+            <div class="surface-card rounded-2xl px-4 py-3 text-center">
+              <div class="font-serif text-2xl sm:text-3xl font-semibold text-main">5+</div>
+              <div class="font-mono text-[9px] uppercase tracking-wider text-mut">Premier Banners</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-8 items-start reveal">
+          <!-- Left: Compact Sticky Identity Dossier -->
+          <aside class="lg:col-span-4 lg:sticky lg:top-24 surface-card rounded-[2rem] p-6 space-y-5">
+            <div class="flex items-center gap-4">
+              <div class="w-16 h-16 rounded-2xl bg-gold-soft border border-str flex items-center justify-center font-cinzel text-xl font-bold text-gold-bright shrink-0">
+                PV
+              </div>
+              <div>
+                <h3 class="font-serif text-2xl font-semibold text-main leading-tight">Venkat Penubothu</h3>
+                <div class="font-mono text-[10px] uppercase tracking-wider text-gold-bright mt-0.5">Filmmaker · Screenwriter</div>
+                <div class="font-mono text-[10px] text-mut mt-0.5">SWA Life Member #51352</div>
+              </div>
+            </div>
+
+            <div class="space-y-2.5 text-xs text-sec border-y border-sub py-4">
+              <div class="flex justify-between gap-2"><span class="text-mut font-mono">Origin</span><span class="text-main text-right">Machilipatnam, India</span></div>
+              <div class="flex justify-between gap-2"><span class="text-mut font-mono">Base</span><span class="text-main text-right">Hyderabad, Telangana</span></div>
+              <div class="flex justify-between gap-2"><span class="text-mut font-mono">Education</span><span class="text-main text-right">B.E. (ECE), SRKR Engg.</span></div>
+              <div class="flex justify-between gap-2"><span class="text-mut font-mono">Languages</span><span class="text-main text-right">Telugu, English, Hindi</span></div>
+            </div>
+
+            <div class="space-y-2 font-mono text-xs">
+              <a href="tel:+917989953118" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl surface-alt hover:border-str transition">
+                <span class="text-mut">Mobile / WA</span>
+                <span class="text-gold-bright font-semibold">+91 79899 53118</span>
+              </a>
+              <a href="tel:+919491584689" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl surface-alt hover:border-str transition">
+                <span class="text-mut">Alternate</span>
+                <span class="text-main">+91 94915 84689</span>
+              </a>
+              <a href="mailto:venkat.penubothu@gmail.com" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl surface-alt hover:border-str transition">
+                <span class="text-mut">Email</span>
+                <span class="text-cyan truncate ml-2">venkat.penubothu@gmail.com</span>
+              </a>
+            </div>
+
+            <div class="flex flex-wrap gap-2 pt-1">
+              <a href="https://www.imdb.com/name/nm10027562/" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-full surface-alt border border-sub hover:border-str font-mono text-[10px] text-main transition">IMDb nm10027562 ↗</a>
+              <a href="https://www.facebook.com/venkat.penubothu/" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-full surface-alt border border-sub hover:border-str font-mono text-[10px] text-main transition">Facebook ↗</a>
+              <a href="https://wa.me/917989953118" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 font-mono text-[10px] text-emerald-400 transition">WhatsApp ↗</a>
+            </div>
+          </aside>
+
+          <!-- Right: 3-Tab Portfolio Area -->
+          <div class="lg:col-span-8 space-y-6">
+            <div class="flex flex-wrap gap-2 border-b border-sub pb-4" role="tablist">
+              <button type="button" id="tab-btn-about" onclick="switchProfileTab('about')"
+                      class="profile-tab px-4 py-2.5 rounded-full font-mono text-xs uppercase tracking-wider bg-gold text-[#06070A] font-bold transition">
+                01 · About &amp; Roots
+              </button>
+              <button type="button" id="tab-btn-filmography" onclick="switchProfileTab('filmography')"
+                      class="profile-tab px-4 py-2.5 rounded-full font-mono text-xs uppercase tracking-wider surface-alt text-sec hover:text-main transition">
+                02 · Filmography (12)
+              </button>
+              <button type="button" id="tab-btn-awards" onclick="switchProfileTab('awards')"
+                      class="profile-tab px-4 py-2.5 rounded-full font-mono text-xs uppercase tracking-wider surface-alt text-sec hover:text-main transition">
+                03 · Festival Awards (15)
+              </button>
+            </div>
+
+            <!-- TAB 01: ABOUT & ROOTS -->
+            <div id="tab-panel-about" class="space-y-6">
+              <div class="surface-card rounded-3xl p-6 sm:p-8 space-y-4">
+                <div class="font-mono text-[10px] uppercase tracking-[0.2em] text-gold-bright">Biography</div>
+                <p class="text-sm sm:text-base text-sec leading-relaxed">
+                  <strong class="text-main">Venkat Tej (Penubothu Venkat)</strong> is an Indian filmmaker and screenwriter active in Telugu Cinema since 2014. He began his mainstream journey as an <strong class="text-main">Associate Director</strong> on the acclaimed espionage thriller <em class="text-gold-bright">Goodachari</em> (Abhishek Pictures &amp; People Media Factory), before transitioning into prestige writers' rooms with <strong class="text-main">Arka Media Works</strong> on Netflix's <em class="text-main">Baahubali: Before the Beginning</em> and Disney+ Hotstar's <em class="text-main">Parampara (Seasons 1 &amp; 2)</em>.
+                </p>
+                <p class="text-sm text-sec leading-relaxed">
+                  Across collaborations with <strong class="text-main">14 Reels Plus Entertainment</strong>, <strong class="text-main">A.K. Entertainments</strong>, and independent directors, Venkat has contributed to over a dozen theatrical features and OTT originals while earning <strong class="text-main">10 international screenplay awards</strong> including the Dadasaheb Phalke International Film Festival, Prix Royal Paris, and Sacramento International Film Festival.
+                </p>
+              </div>
+
+              <div class="grid sm:grid-cols-3 gap-4">
+                <div class="surface-card rounded-2xl p-5 space-y-1.5">
+                  <div class="font-mono text-[10px] uppercase tracking-wider text-gold-bright">Birthplace &amp; Family</div>
+                  <div class="font-serif text-xl font-semibold text-main">Machilipatnam</div>
+                  <p class="text-xs text-sec leading-relaxed">Born to Surendra Babu Penubothu &amp; Lakshmi Annapurna Penubothu in coastal Andhra Pradesh.</p>
+                </div>
+                <div class="surface-card rounded-2xl p-5 space-y-1.5">
+                  <div class="font-mono text-[10px] uppercase tracking-wider text-gold-bright">Alma Mater</div>
+                  <div class="font-serif text-xl font-semibold text-main">Sri Chaitanya College</div>
+                  <p class="text-xs text-sec leading-relaxed">Completed pre-university foundational studies in Machilipatnam.</p>
+                </div>
+                <div class="surface-card rounded-2xl p-5 space-y-1.5">
+                  <div class="font-mono text-[10px] uppercase tracking-wider text-gold-bright">Engineering Degree</div>
+                  <div class="font-serif text-xl font-semibold text-main">SRKR Engineering College</div>
+                  <p class="text-xs text-sec leading-relaxed">B.E. in Electronics &amp; Communications, Bhimavaram — bringing systems-level rigor to story structure.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 02: FILMOGRAPHY (12 CREDITS) -->
+            <div id="tab-panel-filmography" class="hidden space-y-5">
+              <div class="flex flex-wrap gap-2" id="career-filters">
+                <button type="button" onclick="filterCareer('all')" data-cat="all" class="career-pill px-3.5 py-1.5 rounded-full font-mono text-[11px] bg-gold text-[#06070A] font-bold">All (12)</button>
+                <button type="button" onclick="filterCareer('direction')" data-cat="direction" class="career-pill px-3.5 py-1.5 rounded-full font-mono text-[11px] surface-alt text-sec">Direction</button>
+                <button type="button" onclick="filterCareer('arka')" data-cat="arka" class="career-pill px-3.5 py-1.5 rounded-full font-mono text-[11px] surface-alt text-sec">Arka Media Works</button>
+                <button type="button" onclick="filterCareer('14reels')" data-cat="14reels" class="career-pill px-3.5 py-1.5 rounded-full font-mono text-[11px] surface-alt text-sec">14 Reels Plus</button>
+                <button type="button" onclick="filterCareer('indie')" data-cat="indie" class="career-pill px-3.5 py-1.5 rounded-full font-mono text-[11px] surface-alt text-sec">A.K. &amp; Indie</button>
+                <button type="button" onclick="filterCareer('studio')" data-cat="studio" class="career-pill px-3.5 py-1.5 rounded-full font-mono text-[11px] surface-alt text-sec">Studio</button>
+              </div>
+              <div id="career-grid" class="grid sm:grid-cols-2 gap-4"></div>
+            </div>
+
+            <!-- TAB 03: FESTIVAL AWARDS (15 HONORS) -->
+            <div id="tab-panel-awards" class="hidden space-y-5">
+              <div class="flex flex-wrap gap-2" id="award-filters">
+                <button type="button" onclick="filterAwards('all')" data-aw="all" class="award-pill px-3.5 py-1.5 rounded-full font-mono text-[11px] bg-gold text-[#06070A] font-bold">All Honors (15)</button>
+                <button type="button" onclick="filterAwards('Won')" data-aw="Won" class="award-pill px-3.5 py-1.5 rounded-full font-mono text-[11px] surface-alt text-sec">🏆 Winners (10)</button>
+                <button type="button" onclick="filterAwards('Nominated')" data-aw="Nominated" class="award-pill px-3.5 py-1.5 rounded-full font-mono text-[11px] surface-alt text-sec">★ Finalist / Semi-Finalist (5)</button>
+              </div>
+              <div id="awards-grid" class="grid sm:grid-cols-2 gap-3.5"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 4: CREATIVE SERVICES SHOWCASE (01-06)
+         ===================================================================== -->
+    <section id="craft" class="py-20 lg:py-28 border-b border-sub">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 reveal">
+          <div>
+            <div class="font-mono text-[11px] uppercase tracking-[0.22em] text-gold-bright">Studio Capabilities</div>
+            <h2 class="font-serif text-4xl sm:text-5xl font-medium text-main mt-2">Craft &amp; Creative Services</h2>
+          </div>
+          <p class="text-sm text-sec max-w-md">Select any discipline below to inspect deliverables, turnaround windows, and engagement formats.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-8 items-start reveal">
+          <div id="craft-list" class="lg:col-span-7 border-t border-sub"></div>
+          <div class="lg:col-span-5 lg:sticky lg:top-24">
+            <div id="craft-preview" class="surface-card rounded-[2rem] p-7 space-y-5 border-str"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 5: SCRIPT DOCTOR DIAGNOSTIC LAB
+         ===================================================================== -->
+    <section id="script-lab" class="py-20 lg:py-28 border-b border-sub">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        <div class="max-w-2xl reveal">
+          <div class="font-mono text-[11px] uppercase tracking-[0.22em] text-cyan">Interactive Story Diagnostics</div>
+          <h2 class="font-serif text-4xl sm:text-5xl font-medium text-main mt-2">Script Doctor Diagnostic Lab</h2>
+          <p class="text-sm text-sec mt-2">Configure your current project parameters to generate an instant structural prescription from Vishwakarma Creations.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-8 items-start reveal">
+          <div class="lg:col-span-6 surface-card rounded-[2rem] p-6 sm:p-8 space-y-5">
+            <div>
+              <label class="block font-mono text-[10px] uppercase tracking-wider text-mut mb-2">01 · Format</label>
+              <div id="lab-format-btns" class="grid grid-cols-2 gap-2.5"></div>
+            </div>
+            <div>
+              <label class="block font-mono text-[10px] uppercase tracking-wider text-mut mb-2">02 · Primary Genre</label>
+              <div id="lab-genre-btns" class="grid grid-cols-2 sm:grid-cols-3 gap-2"></div>
+            </div>
+            <div>
+              <label class="block font-mono text-[10px] uppercase tracking-wider text-mut mb-2">03 · Primary Structural Bottleneck</label>
+              <select id="lab-issue" onchange="renderLabOutput()" class="cinema-input w-full rounded-xl px-3.5 py-2.5 text-sm">
+                <option value="act2">Second-Act Sag / Interval Drop</option>
+                <option value="character">Passive Protagonist / Weak Emotional Core</option>
+                <option value="pacing">Slow Exposition / OTT Episode Retention</option>
+                <option value="climax">Underwhelming Third-Act Payoff</option>
+                <option value="concept">Strong Premise — Needs Full Bible &amp; Screenplay</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 surface-card rounded-[2rem] p-6 sm:p-8 space-y-5 border-str">
+            <div class="flex items-center justify-between border-b border-sub pb-3">
+              <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-gold-bright">Prescribed Blueprint</span>
+              <span id="lab-timeline-badge" class="font-mono text-[10px] px-2.5 py-1 rounded-full bg-cyan-soft text-cyan">2–3 Weeks</span>
+            </div>
+            <div id="lab-output" class="space-y-4"></div>
+            <button type="button" onclick="sendBlueprintToEnquiry()" data-cursor="ENQUIRE"
+                    class="w-full py-3.5 rounded-full bg-gold hover:bg-[#E8CA86] text-[#06070A] font-mono text-xs font-bold uppercase tracking-wider transition">
+              Send Blueprint as Project Enquiry →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 6: ANATOMY OF A SCENE (COURIER PRIME INSPECTOR)
+         ===================================================================== -->
+    <section id="scene-inspector" class="py-20 lg:py-28 border-b border-sub">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 reveal">
+          <div>
+            <div class="font-mono text-[11px] uppercase tracking-[0.22em] text-gold-bright">Craft on the Page</div>
+            <h2 class="font-serif text-4xl sm:text-5xl font-medium text-main mt-2">Anatomy of a Scene</h2>
+          </div>
+          <p class="text-sm text-sec max-w-md">Click any highlighted screenplay beat to inspect the subtext, rhythm, and directorial intent behind the lines.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-8 items-start reveal">
+          <div class="lg:col-span-7 surface-card rounded-[2rem] p-6 sm:p-8 font-script text-xs sm:text-sm space-y-3">
+            <div class="flex items-center justify-between font-mono text-[10px] text-mut border-b border-sub pb-3 mb-2">
+              <span>SCENE 42 · THRILLER EXCERPT</span>
+              <span>CLICK ANY BEAT TO INSPECT</span>
+            </div>
+            <div id="scene-beats-list" class="space-y-2"></div>
+          </div>
+
+          <div class="lg:col-span-5 lg:sticky lg:top-24">
+            <div id="scene-note-panel" class="surface-card rounded-[2rem] p-7 space-y-4 border-str"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       EDITORIAL FOOTER
+       ========================================================================= -->
+  <footer class="relative z-10 surface-alt border-t border-sub pt-16 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-sub">
+        <div class="lg:col-span-4 space-y-4">
+          <div class="font-cinzel text-xl font-bold tracking-[0.14em] text-main">VISHWAKARMA CREATIONS</div>
+          <p class="text-xs sm:text-sm text-sec leading-relaxed">
+            Handcrafted &amp; Unveiled. Screenwriting, OTT Series Architecture, Direction &amp; Script Doctoring led by Penubothu Venkat (Venkat Tej) in Hyderabad.
+          </p>
+          <button type="button" onclick="openPitchModal()"
+                  class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gold text-[#06070A] font-mono text-xs font-bold uppercase tracking-wider">
+            Project Enquiry →
+          </button>
+        </div>
+
+        <div class="lg:col-span-3 space-y-3">
+          <div class="font-mono text-[10px] uppercase tracking-[0.2em] text-mut">Direct Studio Desk</div>
+          <ul class="space-y-2 text-xs sm:text-sm text-sec font-mono">
+            <li><a href="tel:+917989953118" class="hover:text-gold-bright transition">Mobile: +91 79899 53118</a></li>
+            <li><a href="https://wa.me/917989953118" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition">WhatsApp: +91 79899 53118</a></li>
+            <li><a href="tel:+919491584689" class="hover:text-gold-bright transition">Alt: +91 94915 84689</a></li>
+            <li><a href="mailto:venkat.penubothu@gmail.com" class="text-cyan hover:underline">venkat.penubothu@gmail.com</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3 space-y-3">
+          <div class="font-mono text-[10px] uppercase tracking-[0.2em] text-mut">Public Directories</div>
+          <ul class="space-y-2 text-xs sm:text-sm text-sec">
+            <li><a href="https://www.imdb.com/name/nm10027562/" target="_blank" rel="noopener noreferrer" class="hover:text-gold-bright transition">IMDb — Venkat Tej ↗</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Parampara_(Indian_TV_series)" target="_blank" rel="noopener noreferrer" class="hover:text-gold-bright transition">Parampara — Wikipedia ↗</a></li>
+            <li><a href="https://www.imdb.com/title/tt7758160/" target="_blank" rel="noopener noreferrer" class="hover:text-gold-bright transition">Goodachari — IMDb ↗</a></li>
+            <li><a href="https://www.facebook.com/venkat.penubothu/" target="_blank" rel="noopener noreferrer" class="hover:text-gold-bright transition">Facebook — Venkat Penubothu ↗</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-2 space-y-3">
+          <div class="font-mono text-[10px] uppercase tracking-[0.2em] text-mut">Navigation</div>
+          <ul class="space-y-2 text-xs sm:text-sm text-sec">
+            <li><button type="button" onclick="navigateToSection('posters')" class="hover:text-gold-bright transition">Posters</button></li>
+            <li><button type="button" onclick="navigateToSection('vedic-ethos')" class="hover:text-gold-bright transition">Vedic Ethos</button></li>
+            <li><button type="button" onclick="navigateToSection('career')" class="hover:text-gold-bright transition">Filmography</button></li>
+            <li><button type="button" onclick="navigateToSection('craft')" class="hover:text-gold-bright transition">Services</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-[11px] text-mut">
+        <div>© 2026 Vishwakarma Creations · Penubothu Venkat. All rights reserved.</div>
+        <div>SWA Life Member #51352 · Hyderabad, Telangana</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODAL 1: PRODUCTION DOSSIER MODAL
+       ========================================================================= -->
+  <div id="dossier-modal" class="fixed inset-0 z-[85] hidden items-center justify-center bg-black/75 backdrop-blur-sm p-4" role="dialog" aria-modal="true">
+    <div class="surface-card rounded-[2rem] max-w-xl w-full max-h-[88vh] overflow-y-auto border-str">
+      <div class="sticky top-0 px-6 py-4 border-b border-sub flex items-center justify-between" style="background-color: var(--bg-surface-solid);">
+        <div>
+          <div id="dossier-tag" class="font-mono text-[10px] uppercase tracking-[0.2em] text-gold-bright">PRODUCTION DOSSIER</div>
+          <h3 id="dossier-title" class="font-serif text-2xl sm:text-3xl font-semibold text-main mt-0.5">Project Title</h3>
+        </div>
+        <button type="button" onclick="closeDossierModal()" aria-label="Close" class="w-9 h-9 rounded-full surface-alt flex items-center justify-center text-sec hover:text-main">✕</button>
+      </div>
+      <div id="dossier-body" class="p-6 space-y-5"></div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL 2: PROJECT ENQUIRY & COMMISSION STUDIO (3-STEP FLOW)
+       ========================================================================= -->
+  <div id="pitch-modal" class="fixed inset-0 z-[85] hidden items-center justify-center bg-black/75 backdrop-blur-sm p-4" role="dialog" aria-modal="true">
+    <div class="surface-card rounded-[2rem] max-w-xl w-full max-h-[90vh] overflow-y-auto border-str">
+      <div class="sticky top-0 px-6 py-4 border-b border-sub flex items-center justify-between z-10" style="background-color: var(--bg-surface-solid);">
+        <div>
+          <h3 class="font-serif text-2xl font-semibold text-main">Project Enquiry &amp; Commission</h3>
+          <p id="pitch-step-label" class="font-mono text-[10px] uppercase tracking-wider text-gold-bright mt-0.5">Step 01 / 03 · Select Service &amp; Format</p>
+        </div>
+        <button type="button" onclick="closePitchModal()" aria-label="Close" class="w-9 h-9 rounded-full surface-alt flex items-center justify-center text-sec hover:text-main">✕</button>
+      </div>
+
+      <div class="w-full h-1 bg-gold-soft">
+        <div id="pitch-progress" class="h-full bg-gold transition-all duration-300" style="width: 33%;"></div>
+      </div>
+
+      <div class="p-6 space-y-5">
+        <div id="pitch-step-1" class="space-y-4">
+          <div>
+            <label class="block font-mono text-[10px] uppercase tracking-wider text-mut mb-2">Service Required</label>
+            <div id="pitch-service-grid" class="grid sm:grid-cols-2 gap-2.5"></div>
+          </div>
+          <div>
+            <label for="pitch-format" class="block font-mono text-[10px] uppercase tracking-wider text-mut mb-1.5">Project Format</label>
+            <select id="pitch-format" class="cinema-input w-full rounded-xl px-3.5 py-2.5 text-sm">
+              <option>Theatrical Feature Film</option>
+              <option>OTT Original Series (Multi-Episode)</option>
+              <option>Pan-India Event Film</option>
+              <option>Short Film / Proof-of-Concept</option>
+            </select>
+          </div>
+          <div class="flex justify-end">
+            <button type="button" onclick="setPitchStep(2)" class="px-6 py-2.5 rounded-full bg-gold text-[#06070A] font-mono text-xs font-bold uppercase tracking-wider">Continue →</button>
+          </div>
+        </div>
+
+        <div id="pitch-step-2" class="hidden space-y-4">
+          <div>
+            <label for="pitch-title" class="block font-mono text-[10px] uppercase tracking-wider text-mut mb-1.5">Working Title / Banner</label>
+            <input id="pitch-title" type="text" placeholder="e.g., Untitled Thriller — Production House" class="cinema-input w-full rounded-xl px-3.5 py-2.5 text-sm" />
+          </div>
+          <div>
+            <label for="pitch-brief" class="block font-mono text-[10px] uppercase tracking-wider text-mut mb-1.5">Project Brief / Logline</label>
+            <textarea id="pitch-brief" rows="3" placeholder="Share your premise, stage of development, or timeline..." class="cinema-input w-full rounded-xl px-3.5 py-2.5 text-sm"></textarea>
+          </div>
+          <label class="flex items-center gap-2.5 text-xs text-sec cursor-pointer">
+            <input id="pitch-nda" type="checkbox" checked class="accent-[#C9A255]" />
+            <span>Request mutual Non-Disclosure Agreement (NDA) prior to script exchange</span>
+          </label>
+          <div class="flex items-center justify-between pt-2">
+            <button type="button" onclick="setPitchStep(1)" class="px-4 py-2 rounded-full border border-sub font-mono text-xs text-sec">← Back</button>
+            <button type="button" onclick="setPitchStep(3)" class="px-6 py-2.5 rounded-full bg-gold text-[#06070A] font-mono text-xs font-bold uppercase tracking-wider">Continue →</button>
+          </div>
+        </div>
+
+        <div id="pitch-step-3" class="hidden space-y-4">
+          <div class="grid sm:grid-cols-2 gap-3.5">
+            <div>
+              <label for="pitch-name" class="block font-mono text-[10px] uppercase tracking-wider text-mut mb-1.5">Your Name *</label>
+              <input id="pitch-name" type="text" placeholder="Full Name" class="cinema-input w-full rounded-xl px-3.5 py-2.5 text-sm" />
+            </div>
+            <div>
+              <label for="pitch-phone" class="block font-mono text-[10px] uppercase tracking-wider text-mut mb-1.5">Mobile / WhatsApp *</label>
+              <input id="pitch-phone" type="tel" placeholder="+91 XXXXX XXXXX" class="cinema-input w-full rounded-xl px-3.5 py-2.5 text-sm" />
+            </div>
+          </div>
+          <div>
+            <label for="pitch-email" class="block font-mono text-[10px] uppercase tracking-wider text-mut mb-1.5">Email Address *</label>
+            <input id="pitch-email" type="email" placeholder="producer@banner.com" class="cinema-input w-full rounded-xl px-3.5 py-2.5 text-sm" />
+          </div>
+          <div id="pitch-err" class="hidden text-xs font-mono text-red-400 bg-red-500/10 border border-red-500/30 rounded-xl px-3.5 py-2"></div>
+          <div class="flex items-center justify-between pt-2">
+            <button type="button" onclick="setPitchStep(2)" class="px-4 py-2 rounded-full border border-sub font-mono text-xs text-sec">← Back</button>
+            <button type="button" onclick="completePitch()" class="px-6 py-2.5 rounded-full bg-gold text-[#06070A] font-mono text-xs font-bold uppercase tracking-wider">Submit Project Enquiry</button>
+          </div>
+        </div>
+
+        <div id="pitch-step-4" class="hidden space-y-5 text-center">
+          <div class="w-12 h-12 rounded-2xl bg-gold-soft border border-str text-gold-bright flex items-center justify-center mx-auto text-xl">✓</div>
+          <div class="space-y-1">
+            <h4 class="font-serif text-3xl font-semibold text-main">Enquiry Received</h4>
+            <div id="pitch-ref-out" class="font-mono text-xs text-gold-bright">VC-2026-0000</div>
+          </div>
+          <p id="pitch-confirm-text" class="text-xs sm:text-sm text-sec leading-relaxed"></p>
+          <div class="flex flex-col sm:flex-row gap-2.5 justify-center pt-1">
+            <a id="pitch-mailto-link" href="mailto:venkat.penubothu@gmail.com" class="px-5 py-2.5 rounded-full border border-str font-mono text-xs text-main hover:border-[var(--gold-bright)] transition">
+              Email Copy to Venkat
+            </a>
+            <a id="pitch-wa-link" href="https://wa.me/917989953118" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-emerald-600 text-white font-mono text-xs font-semibold">
+              Send via WhatsApp
+            </a>
+          </div>
+          <button type="button" onclick="closePitchModal()" class="font-mono text-[11px] text-mut hover:text-main">Close Window</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Desktop WhatsApp Quick Button -->
+  <a href="https://wa.me/917989953118?text=Hello%20Venkat%2C%20I%20would%20like%20to%20enquire%20about%20a%20project%20with%20Vishwakarma%20Creations."
+     target="_blank" rel="noopener noreferrer" data-cursor="CHAT"
+     class="hidden md:flex fixed bottom-6 right-6 z-40 items-center gap-2 px-4 py-2.5 rounded-full bg-[#128C7E] hover:bg-[#0D6E63] text-white font-mono text-xs font-semibold shadow-xl transition">
+    <span>WhatsApp Studio</span>
+  </a>
+
+  <!-- Mobile Sticky Quick-Action Bar -->
+  <div class="md:hidden fixed bottom-0 inset-x-0 z-50 cinema-header border-t border-sub px-2.5 py-2 grid grid-cols-3 gap-2">
+    <a href="tel:+917989953118" class="flex flex-col items-center justify-center py-2 rounded-xl surface-alt text-[11px] font-mono text-main">
+      <span>Call</span>
+      <span class="text-[9px] text-mut">79899 53118</span>
+    </a>
+    <a href="https://wa.me/917989953118" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center py-2 rounded-xl bg-emerald-500/15 text-emerald-400 text-[11px] font-mono">
+      <span>WhatsApp</span>
+      <span class="text-[9px] opacity-80">Direct Chat</span>
+    </a>
+    <button type="button" onclick="openPitchModal()" class="flex flex-col items-center justify-center py-2 rounded-xl bg-gold text-[#06070A] text-[11px] font-mono font-bold">
+      <span>Project Enquiry</span>
+      <span class="text-[9px] opacity-85">Commission Work</span>
+    </button>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="fixed top-24 right-5 z-[95] hidden px-4 py-2.5 rounded-full bg-gold text-[#06070A] font-mono text-xs font-bold shadow-xl"></div>
+
+  <!-- =========================================================================
+       INTERACTIVE APPLICATION SCRIPT
+       ========================================================================= -->
+  <script>
+    // =========================================================================
+    // 1. VERIFIED DATA REPOSITORIES
+    // =========================================================================
+    const HERO_BEATS = [
+      {
+        meta: 'DRAFT · ESPIONAGE THRILLER',
+        slug: 'INT. SAFE HOUSE — NIGHT',
+        action: 'A single projector beam cuts through obsidian air. On the blank canvas, an entire operation begins to breathe—beat by beat, silence by silence.',
+        speaker: 'SŪTRADHĀRA (V.O.)',
+        line: 'A great thriller is never improvised on set. It is architected on the page—until every twist feels inevitable.',
+        cut: 'CUT TO:'
+      },
+      {
+        meta: 'DRAFT · MYTHIC PERIOD EPIC',
+        slug: 'EXT. CITADEL RAMPART — DAWN',
+        action: 'Mist parts across sandstone battlements. Below, ten thousand banners stir before a single word of war is spoken.',
+        speaker: 'ARCHITECT (V.O.)',
+        line: 'Before kingdoms clash on screen, their laws, betrayals, and bloodlines are measured to the millimeter.',
+        cut: 'SMASH CUT TO:'
+      },
+      {
+        meta: 'DRAFT · POLITICAL FAMILY DRAMA',
+        slug: 'INT. ANCESTRAL COURTYARD — DUSK',
+        action: 'Two chairs face each other across a rain-washed veranda. One man holds the deed; the other holds the silence.',
+        speaker: 'ELDER',
+        line: 'Power is never loud when it enters the room. It waits for the other man to speak first.',
+        cut: 'FADE OUT.'
+      }
+    ];
+
+    const BANNERS_WORKED = [
+      { name: 'Arka Media Works', sub: 'Baahubali · Parampara', cat: 'arka', monogram: 'AMW' },
+      { name: 'Netflix', sub: 'Original Series Room', cat: 'arka', monogram: 'N' },
+      { name: 'Disney+ Hotstar', sub: 'Parampara S1 & S2', cat: 'arka', monogram: 'D+' },
+      { name: '14 Reels Plus', sub: 'Multi-Project Slate', cat: '14reels', monogram: '14R' },
+      { name: 'A.K. Entertainments', sub: 'OTT Original', cat: 'indie', monogram: 'AK' },
+      { name: 'Abhishek Pictures', sub: 'Goodachari (2018)', cat: 'direction', monogram: 'AP' },
+      { name: 'People Media Factory', sub: 'Goodachari (2018)', cat: 'direction', monogram: 'PMF' }
+    ];
+
+    const POSTER_SLATE = [
+      {
+        id: 'goodachari', title: 'GOODACHARI', year: '2018', format: 'THEATRICAL FEATURE', role: 'Associate Director',
+        banner: 'Abhishek Pictures · People Media Factory', tagline: 'CODE NAME: 116 · ESPIONAGE THRILLER',
+        palette: ['#0A121C', '#16283B', '#C9A255', '#7CC6D4'],
+        motif: `<circle cx="150" cy="148" r="56" stroke="#7CC6D4" stroke-opacity="0.32" stroke-dasharray="5 4"/>
+                <circle cx="150" cy="148" r="34" stroke="#E8CA86" stroke-opacity="0.55"/>
+                <path d="M150 76 V220 M78 148 H222" stroke="#7CC6D4" stroke-opacity="0.28"/>
+                <text x="150" y="155" text-anchor="middle" fill="#E8CA86" font-family="JetBrains Mono" font-size="18" font-weight="700" letter-spacing="4">116</text>`
+      },
+      {
+        id: 'baahubali', title: 'BAAHUBALI', subtitle: 'BEFORE THE BEGINNING', year: '2019', format: 'NETFLIX ORIGINAL', role: 'Assistant Screenwriter',
+        banner: 'Arka Media Works · Netflix', tagline: 'THE RISE OF MAHISHMATI',
+        palette: ['#181008', '#3B2310', '#E8CA86', '#D97706'],
+        motif: `<path d="M150 72 L182 128 L150 144 L118 128 Z" fill="none" stroke="#E8CA86" stroke-width="1.6"/>
+                <path d="M95 196 Q150 156 205 196" fill="none" stroke="#E8CA86" stroke-opacity="0.55" stroke-width="1.4"/>
+                <circle cx="150" cy="128" r="58" stroke="#D97706" stroke-opacity="0.28"/>
+                <polygon points="150,94 162,118 150,136 138,118" fill="#E8CA86" fill-opacity="0.22" stroke="#E8CA86" stroke-width="1"/>`
+      },
+      {
+        id: 'parampara', title: 'PARAMPARA', subtitle: 'SEASONS 1 & 2', year: '2020–22', format: 'DISNEY+ HOTSTAR', role: 'Associate Screenwriter',
+        banner: 'Arka Media Works · Disney+ Hotstar', tagline: 'LEGACY · POWER · RECKONING',
+        palette: ['#140C0C', '#2E1616', '#E8CA86', '#B91C1C'],
+        motif: `<rect x="108" y="88" width="84" height="112" rx="42" stroke="#E8CA86" stroke-opacity="0.45" fill="none"/>
+                <line x1="150" y1="74" x2="150" y2="214" stroke="#B91C1C" stroke-opacity="0.65" stroke-width="2"/>
+                <circle cx="150" cy="144" r="24" fill="#140C0C" stroke="#E8CA86" stroke-width="1.4"/>
+                <text x="150" y="149" text-anchor="middle" fill="#E8CA86" font-family="Cinzel" font-size="14" font-weight="700">I · II</text>`
+      },
+      {
+        id: 'ghost-lives', title: 'GHOST LIVES', subtitle: 'WORKING TITLE', year: '2020', format: 'OTT SERIES', role: 'Associate Screenwriter',
+        banner: '14 Reels Plus Entertainment', tagline: 'SUPERNATURAL MYSTERY THRILLER',
+        palette: ['#090D14', '#162133', '#7CC6D4', '#C9A255'],
+        motif: `<ellipse cx="150" cy="144" rx="48" ry="64" stroke="#7CC6D4" stroke-opacity="0.4" fill="none"/>
+                <ellipse cx="150" cy="144" rx="26" ry="42" stroke="#E8CA86" stroke-opacity="0.45" fill="none" stroke-dasharray="3 4"/>
+                <circle cx="150" cy="144" r="6" fill="#7CC6D4"/>`
+      },
+      {
+        id: 'green-gold', title: 'GREEN GOLD', subtitle: 'WORKING TITLE', year: '2022', format: 'CRIME SERIES', role: 'Associate Screenwriter',
+        banner: '14 Reels Plus · Maggidi Ramakrishna', tagline: 'INVESTIGATIVE CRIME DRAMA',
+        palette: ['#08130E', '#122B20', '#C9A255', '#34D399'],
+        motif: `<polygon points="150,82 204,114 204,174 150,206 96,174 96,114" fill="none" stroke="#C9A255" stroke-opacity="0.5"/>
+                <polygon points="150,104 184,124 184,164 150,184 116,164 116,124" fill="none" stroke="#34D399" stroke-opacity="0.4"/>`
+      },
+      {
+        id: 'history', title: 'HISTORY', subtitle: 'WORKING TITLE', year: '2021', format: 'OTT ORIGINAL', role: 'Associate Screenwriter',
+        banner: 'A.K. Entertainments', tagline: 'MULTI-TIMELINE DRAMA',
+        palette: ['#13100C', '#292218', '#E8CA86', '#94A3B8'],
+        motif: `<circle cx="150" cy="144" r="54" stroke="#E8CA86" stroke-opacity="0.45" fill="none"/>
+                <line x1="150" y1="144" x2="150" y2="104" stroke="#E8CA86" stroke-width="1.8" stroke-linecap="round"/>
+                <line x1="150" y1="144" x2="180" y2="156" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="150" cy="144" r="4" fill="#E8CA86"/>`
+      }
+    ];
+
+    const CAREER_CREDITS = [
+      { id: 'goodachari', year: '2018', title: 'Goodachari', format: 'Feature Film', banner: 'Abhishek Pictures & People Media Factory', role: 'Associate Director', cat: 'direction', tag: 'THEATRICAL HIT', summary: 'Acclaimed Telugu espionage thriller starring Adivi Sesh. Handled on-set associate direction, schedule continuity, and dramatic scene execution.', link: 'https://www.imdb.com/title/tt7758160/', linkLabel: 'View on IMDb' },
+      { id: 'baahubali', year: '2019', title: 'Baahubali: Before the Beginning', format: 'OTT Series (Netflix)', banner: 'Arka Media Works', role: 'Assistant Screenwriter', cat: 'arka', tag: 'NETFLIX ORIGINAL', summary: 'Prestige prequel series set in the Mahishmati universe for Netflix. Contributed to writers’ room story breaking, episode outlines, and character arcs.', link: 'https://www.imdb.com/title/tt8790150/', linkLabel: 'View on IMDb' },
+      { id: 'parampara', year: '2020–22', title: 'Parampara (Seasons 1 & 2)', format: 'OTT Series (Disney+ Hotstar)', banner: 'Arka Media Works', role: 'Associate Screenwriter', cat: 'arka', tag: 'DISNEY+ HOTSTAR', summary: 'High-stakes Telugu political and family legacy drama streaming on Disney+ Hotstar. Co-developed episodic tension, character rivalries, and dramatic cliffhangers across both seasons.', link: 'https://en.wikipedia.org/wiki/Parampara_(Indian_TV_series)', linkLabel: 'Parampara on Wikipedia' },
+      { id: 'malawi', year: '2020', title: 'Malawi (Working Title)', format: 'Feature Film', banner: 'Arka Media Works', role: 'Associate Screenwriter', cat: 'arka', tag: 'DEVELOPMENT', summary: 'Feature screenplay developed under Arka Media Works focusing on high-concept narrative architecture and international thriller pacing.' },
+      { id: 'ghost-lives', year: '2020', title: 'Ghost Lives (Working Title)', format: 'OTT Series', banner: '14 Reels Plus Entertainment', role: 'Associate Screenwriter', cat: '14reels', tag: 'OTT SERIES', summary: 'Atmospheric supernatural thriller series developed for 14 Reels Plus Entertainment with layered mystery plotting.' },
+      { id: 'brand-ka-band-baja', year: '2020', title: 'Brand Ka Band Baja (Working Title)', format: 'Feature Film', banner: '14 Reels Plus Entertainment', role: 'Associate Screenwriter', cat: '14reels', tag: 'FEATURE FILM', summary: 'Satirical commercial feature developed for 14 Reels Plus Entertainment balancing sharp character comedy with tight three-act momentum.' },
+      { id: 'history', year: '2021', title: 'HIStory (Working Title)', format: 'OTT Series', banner: 'A.K. Entertainments', role: 'Associate Screenwriter', cat: 'indie', tag: 'OTT ORIGINAL', summary: 'Multi-timeline original OTT drama developed for A.K. Entertainments.' },
+      { id: 'rangoon-trophy', year: '2021', title: 'Rangoon Raja Ratnam Trophy (WT)', format: 'OTT Series', banner: '14 Reels Plus Entertainment', role: 'Associate Screenwriter', cat: '14reels', tag: 'OTT SERIES', summary: 'Ensemble character-driven original series crafted for 14 Reels Plus Entertainment.' },
+      { id: 'saptah', year: '2021', title: 'Saptah (Working Title)', format: 'Feature Film', banner: 'Dir. Maggidi Ramakrishna (Aha: 3 Roses)', role: 'Associate Screenwriter', cat: 'indie', tag: 'FEATURE FILM', summary: 'Feature screenplay collaboration with director Maggidi Ramakrishna exploring tightly wound dramatic suspense.' },
+      { id: 'green-gold', year: '2022', title: 'Green Gold (Working Title)', format: 'OTT Series', banner: 'Maggidi Ramakrishna / 14 Reels Plus', role: 'Associate Screenwriter', cat: '14reels', tag: 'CRIME SERIES', summary: 'Investigative crime-drama series developed for 14 Reels Plus Entertainment in collaboration with Maggidi Ramakrishna.' },
+      { id: 'abhay', year: '2022', title: 'Abhay (Working Title)', format: 'Feature Film', banner: 'Maggidi Ramakrishna / 14 Reels Plus', role: 'Associate Screenwriter', cat: '14reels', tag: 'FEATURE FILM', summary: 'Theatrical feature screenplay developed for 14 Reels Plus Entertainment.' },
+      { id: 'vishwakarma', year: 'Present', title: 'Vishwakarma Creations', format: 'Independent Story Studio', banner: 'Founded by Penubothu Venkat', role: 'Founder, Writer & Director', cat: 'studio', tag: 'STUDIO SLATE', summary: 'Boutique screenwriting, OTT series architecture, script doctoring, and direction house based in Hyderabad, developing original theatrical and streaming IP.' }
+    ];
+
+    const FESTIVAL_AWARDS = [
+      { year: '2021', title: 'Best Screenplay', festival: 'Bharat International Film Festival', result: 'Won' },
+      { year: '2021', title: 'Best Screenplay', festival: 'PRIX ROYAL Paris Screenplay Awards', result: 'Won' },
+      { year: '2020', title: 'Best Screenplay', festival: 'LIFFT India Filmotsav — World Cine Fest', result: 'Won' },
+      { year: '2020', title: 'Finalist', festival: 'LIFFT India Filmotsav — World Cine Fest', result: 'Nominated' },
+      { year: '2019', title: 'Best Screenplay', festival: 'Dadasaheb Phalke International Film Festival', result: 'Won' },
+      { year: '2019', title: 'Best Screenplay', festival: 'Sacramento International Film Festival', result: 'Won' },
+      { year: '2019', title: 'Best Screenplay', festival: 'MoziMotion International Film Festival', result: 'Won' },
+      { year: '2019', title: 'Semi-Finalist', festival: 'HCF Screenplay Competition', result: 'Nominated' },
+      { year: '2018', title: 'Semi-Finalist', festival: 'Sacramento International Film Festival', result: 'Nominated' },
+      { year: '2018', title: 'Semi-Finalist', festival: 'San Mauro Film Festival', result: 'Nominated' },
+      { year: '2017', title: 'Best Screenplay', festival: 'STEPS International Film Festival', result: 'Won' },
+      { year: '2016', title: 'Best Screenplay', festival: 'Fright Night Film Fest', result: 'Won' },
+      { year: '2016', title: 'Award Winner', festival: 'International Open Film Festival (IOFF)', result: 'Won' },
+      { year: '2016', title: 'Award Winner', festival: 'Mediterranean Film Festival (MedFF)', result: 'Won' },
+      { year: '2016', title: 'Finalist', festival: 'IndustryBOOST Screenplay Competition', result: 'Nominated' }
+    ];
+
+    const CRAFTS = [
+      { idx: '01', name: 'Feature Film Screenwriting', turnaround: '6–10 Weeks', desc: 'Original or adapted theatrical screenplays engineered for pan-Indian audience emotion, sharp interval highs, and airtight three-act payoff.', deliverables: ['Beat Sheet & Treatment', 'Full Bound Screenplay (Courier Prime)', 'Character Bibles', 'Production-Ready Polish'] },
+      { idx: '02', name: 'OTT Series Architecture & Bibles', turnaround: '4–8 Weeks', desc: 'Season-long narrative engineering built for Netflix, Disney+ Hotstar, and Amazon Prime retention curves, cold opens, and episode cliffhangers.', deliverables: ['Series Show Bible', 'Season 1 Episode Grid', 'Pilot Teleplay', 'Multi-Season Expansion Arc'] },
+      { idx: '03', name: 'Script Doctoring & Punch-Up', turnaround: '2–3 Weeks', desc: 'Surgical structural diagnosis and page-one/scene-level rewrites to fix second-act sag, sharpen stakes, and tighten pacing before shoot.', deliverables: ['Scene-by-Scene Diagnostic Report', 'Structural Re-Architecture', 'Dialogue Polish', 'Director Alignment Session'] },
+      { idx: '04', name: 'Direction & Creative Supervision', turnaround: 'Project Basis', desc: 'Translating architectural scripts to screen with disciplined visual blocking, performance rhythm, and writers’-room-to-set continuity.', deliverables: ['Director’s Visual Treatment', 'Shot & Blocking Blueprint', 'Casting & Table-Read Supervision', 'On-Set Execution'] },
+      { idx: '05', name: 'Dialogue & Cultural Adaptation', turnaround: '2–4 Weeks', desc: 'Authentic Telugu, English, and pan-Indian dialogue passes that preserve regional idiom, subtext, and cinematic punch.', deliverables: ['Character Voice Pass', 'Subtext & Rhythm Polish', 'Bilingual Adaptation', 'Actor Table-Read Revisions'] },
+      { idx: '06', name: 'Pitch Decks & Studio Lookbooks', turnaround: '1–2 Weeks', desc: 'Investor- and platform-ready pitch decks combining world-building, tonal references, character portraits, and commercial positioning.', deliverables: ['Visual Lookbook PDF', 'Logline & Synopsis Suite', 'Audience & Platform Positioning', 'Verbal Pitch Coaching'] }
+    ];
+
+    const SCENE_BEATS = [
+      { idx: '01', type: 'SLUGLINE', text: 'INT. ARCHIVE VAULT — NIGHT', noteTitle: 'Immediate Spatial Stakes', note: 'Opening inside a sealed vault establishes claustrophobia and secrecy in four words—no wasted exposition.' },
+      { idx: '02', type: 'ACTION', text: 'Rain needles the high skylight. ARJUN (34) slides a brass compass across an unfinished blueprint. His fingers stop on an unmarked corridor.', noteTitle: 'Visual Storytelling Over Dialogue', note: 'Character intelligence is demonstrated through physical action (the compass and unmarked corridor) rather than explaining his profession aloud.' },
+      { idx: '03', type: 'DIALOGUE', text: 'RATHORE (O.S.)\nYou were hired to verify the seal, Arjun. Not to question the architect.', noteTitle: 'Power Dynamic via Off-Screen Entry', note: 'Introducing the antagonist off-screen (O.S.) gives him psychological dominance before the camera even reveals his face.' },
+      { idx: '04', type: 'ACTION', text: 'Arjun doesn’t turn. He folds the blueprint cleanly along the crease—locking the corridor out of sight.', noteTitle: 'Subtext Through Restraint', note: 'Refusing to turn signals composure under threat; folding the corridor proves he already holds leverage.' },
+      { idx: '05', type: 'DIALOGUE', text: 'ARJUN\nEvery vault has a flaw. Yours has a signature.', noteTitle: 'The Scene Turn & Button', note: 'A crisp 10-word reversal flips the power dynamic and propels the audience immediately into the next sequence.' }
+    ];
+
+    // =========================================================================
+    // 2. HIGH-RESOLUTION PROCEDURAL VISHWAKARMA EMBLEM (INTRO & WATERMARK)
+    // =========================================================================
+    function buildMasterEmblemSVG(uid) {
+      return `
+        <svg viewBox="0 0 1200 675" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="g-bg-${uid}" cx="50%" cy="46%" r="65%">
+              <stop offset="0%" stop-color="#C89B42" stop-opacity="0.45"/>
+              <stop offset="48%" stop-color="#3B2A10" stop-opacity="0.72"/>
+              <stop offset="100%" stop-color="#06070A" stop-opacity="1"/>
+            </radialGradient>
+            <linearGradient id="g-metal-${uid}" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#F2D794"/>
+              <stop offset="50%" stop-color="#A67C32"/>
+              <stop offset="100%" stop-color="#4A3412"/>
+            </linearGradient>
+            <radialGradient id="g-cyan-${uid}" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#B8F4FF"/>
+              <stop offset="45%" stop-color="#38BDF8" stop-opacity="0.85"/>
+              <stop offset="100%" stop-color="#0284C7" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="g-fire-${uid}" cx="50%" cy="70%" r="55%">
+              <stop offset="0%" stop-color="#FFF3B0"/>
+              <stop offset="45%" stop-color="#F59E0B"/>
+              <stop offset="100%" stop-color="#B45309" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+
+          <rect width="1200" height="675" fill="url(#g-bg-${uid})"/>
+          <g class="gear-cw" opacity="0.55">
+            <circle cx="600" cy="300" r="195" fill="none" stroke="url(#g-metal-${uid})" stroke-width="18" stroke-dasharray="18 14"/>
+            <circle cx="600" cy="300" r="172" fill="none" stroke="#E8CA86" stroke-width="2" stroke-opacity="0.45"/>
+          </g>
+          <g class="gear-ccw" opacity="0.45">
+            <circle cx="385" cy="365" r="78" fill="none" stroke="url(#g-metal-${uid})" stroke-width="12" stroke-dasharray="14 10"/>
+            <circle cx="825" cy="340" r="74" fill="none" stroke="url(#g-metal-${uid})" stroke-width="12" stroke-dasharray="14 10"/>
+          </g>
+          <g transform="translate(215, 365)">
+            <path d="M-58 70 V-10 A58 58 0 0 1 58 -10 V70 Z" fill="#18120B" stroke="url(#g-metal-${uid})" stroke-width="8"/>
+            <ellipse cx="0" cy="24" rx="34" ry="44" fill="url(#g-fire-${uid})" class="flame-flicker"/>
+          </g>
+          <g opacity="0.72" class="cyan-pulse">
+            <rect x="275" y="130" width="180" height="106" rx="10" fill="rgba(56,189,248,0.08)" stroke="#7CC6D4" stroke-width="1.5"/>
+            <ellipse cx="365" cy="183" rx="58" ry="30" fill="none" stroke="#7CC6D4" stroke-width="1" stroke-dasharray="4 3"/>
+            <rect x="745" y="130" width="180" height="106" rx="10" fill="rgba(56,189,248,0.08)" stroke="#7CC6D4" stroke-width="1.5"/>
+            <circle cx="835" cy="183" r="30" fill="none" stroke="#7CC6D4" stroke-width="1.2"/>
+            <ellipse cx="835" cy="183" rx="54" ry="14" fill="none" stroke="#7CC6D4" stroke-width="1" transform="rotate(-18 835 183)"/>
+            <rect x="735" y="385" width="175" height="108" rx="10" fill="rgba(56,189,248,0.08)" stroke="#7CC6D4" stroke-width="1.5"/>
+            <circle cx="822" cy="439" r="34" fill="none" stroke="#7CC6D4" stroke-width="1.2" stroke-dasharray="8 4"/>
+          </g>
+          <g transform="translate(600, 215)">
+            <circle cx="0" cy="-18" r="56" fill="none" stroke="#E8CA86" stroke-width="2" stroke-dasharray="4 4" opacity="0.7"/>
+            <path d="M-24 -52 L0 -102 L24 -52 Z" fill="url(#g-metal-${uid})" stroke="#F2D794" stroke-width="1.5"/>
+            <ellipse cx="0" cy="-16" rx="28" ry="34" fill="#2A1E0E" stroke="url(#g-metal-${uid})" stroke-width="2.5"/>
+            <ellipse cx="-10" cy="-18" rx="5.5" ry="2.8" fill="#B8F4FF" class="cyan-pulse"/>
+            <ellipse cx="10" cy="-18" rx="5.5" ry="2.8" fill="#B8F4FF" class="cyan-pulse"/>
+            <path d="M-66 74 C-62 32, -34 18, 0 18 C34 18, 62 32, 66 74 Z" fill="#22180B" stroke="url(#g-metal-${uid})" stroke-width="2.5"/>
+            <circle cx="0" cy="68" r="46" fill="url(#g-cyan-${uid})" class="cyan-pulse"/>
+            <polygon points="0,38 26,62 0,94 -26,62" fill="#B8F4FF" fill-opacity="0.85" stroke="#FFFFFF" stroke-width="1.5"/>
+          </g>
+          <g transform="translate(600, 412)">
+            <path d="M-112 -74 L0 -96 L112 -74 V14 C112 78, 52 118, 0 138 C-52 118, -112 78, -112 14 Z" fill="#18120B" stroke="url(#g-metal-${uid})" stroke-width="7"/>
+            <text x="0" y="-12" text-anchor="middle" fill="#F2D794" font-family="Cinzel,Georgia,serif" font-size="24" font-weight="700" letter-spacing="2">VISHWAKARMA</text>
+            <text x="0" y="22" text-anchor="middle" fill="#E8CA86" font-family="Cinzel,Georgia,serif" font-size="22" font-weight="600" letter-spacing="3">CREATIONS</text>
+            <path d="M-54 68 L-30 88 M54 68 L30 88 M0 52 V106" stroke="#7CC6D4" stroke-width="1.5" opacity="0.7" class="cyan-pulse"/>
+          </g>
+          <g transform="translate(600, 588)">
+            <path d="M-215 -14 Q0 24 215 -14 L205 26 Q0 62 -205 26 Z" fill="#1A130B" stroke="url(#g-metal-${uid})" stroke-width="3"/>
+            <text x="0" y="22" text-anchor="middle" fill="#E8CA86" font-family="Cinzel,Georgia,serif" font-size="18" font-weight="600" letter-spacing="4">HANDCRAFTED &amp; UNVEILED</text>
+          </g>
+        </svg>
+      `;
+    }
+
+    function mountHighResEmblems() {
+      const introMount = document.getElementById('intro-emblem-mount');
+      const bgSim = document.getElementById('bg-video-sim');
+      const heroBg = document.getElementById('hero-emblem-backdrop');
+      if (introMount) introMount.innerHTML = buildMasterEmblemSVG('intro');
+      if (bgSim) bgSim.innerHTML = buildMasterEmblemSVG('bg');
+      if (heroBg) heroBg.innerHTML = buildMasterEmblemSVG('hero');
+    }
+
+    // =========================================================================
+    // 3. DYNAMIC MOTION: PROJECTOR MOTES, HERO PARALLAX & LIVE SCRIPT SWITCHER
+    // =========================================================================
+    function initProjectorMotes() {
+      const canvas = document.getElementById('projector-motes');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let w = 0, h = 0, mx = -999, my = -999;
+
+      function resize() {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+      }
+      resize();
+      window.addEventListener('resize', resize);
+      window.addEventListener('mousemove', (e) => { mx = e.clientX; my = e.clientY; }, { passive: true });
+
+      const count = window.innerWidth < 768 ? 22 : 42;
+      const motes = Array.from({ length: count }, () => ({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        r: Math.random() * 1.6 + 0.5,
+        vx: (Math.random() - 0.5) * 0.24,
+        vy: -Math.random() * 0.3 - 0.08,
+        a: Math.random() * 0.45 + 0.12,
+        cyan: Math.random() > 0.78
+      }));
+
+      function draw() {
+        ctx.clearRect(0, 0, w, h);
+        for (const m of motes) {
+          m.x += m.vx;
+          m.y += m.vy;
+          const dx = m.x - mx, dy = m.y - my;
+          const dist = Math.hypot(dx, dy);
+          if (dist < 110 && dist > 1) {
+            m.x += (dx / dist) * 0.55;
+            m.y += (dy / dist) * 0.55;
+          }
+          if (m.y < -10) { m.y = h + 10; m.x = Math.random() * w; }
+          if (m.x < -10) m.x = w + 10;
+          if (m.x > w + 10) m.x = -10;
+
+          ctx.beginPath();
+          ctx.arc(m.x, m.y, m.r, 0, Math.PI * 2);
+          ctx.fillStyle = m.cyan ? `rgba(124,198,212,${m.a})` : `rgba(232,202,134,${m.a})`;
+          ctx.fill();
+        }
+        requestAnimationFrame(draw);
+      }
+      requestAnimationFrame(draw);
+    }
+
+    function initHeroParallax() {
+      const heroBg = document.getElementById('hero-emblem-backdrop');
+      if (!heroBg || !window.matchMedia('(hover: hover)').matches) return;
+      window.addEventListener('mousemove', (e) => {
+        if (window.scrollY > window.innerHeight) return;
+        const nx = (e.clientX / window.innerWidth - 0.5) * -18;
+        const ny = (e.clientY / window.innerHeight - 0.5) * -14;
+        heroBg.style.transform = `translate3d(${nx}px, ${ny}px, 0) scale(1.03)`;
+      }, { passive: true });
+    }
+
+    let heroBeatIdx = 0;
+    let heroBeatTimer = null;
+    function selectHeroBeat(idx) {
+      heroBeatIdx = idx % HERO_BEATS.length;
+      const b = HERO_BEATS[heroBeatIdx];
+      const meta = document.getElementById('hero-beat-meta');
+      const body = document.getElementById('hero-beat-body');
+      if (meta) meta.textContent = b.meta;
+      if (body) {
+        body.style.opacity = '0.25';
+        setTimeout(() => {
+          body.innerHTML = `
+            <div class="font-bold text-main uppercase tracking-wide">${escapeHtml(b.slug)}</div>
+            <p>${escapeHtml(b.action)}</p>
+            <div class="pl-6 sm:pl-10">
+              <div class="font-bold text-gold-bright uppercase">${escapeHtml(b.speaker)}</div>
+              <p class="italic text-main">${escapeHtml(b.line)}</p>
+            </div>
+            <div class="text-right font-bold text-mut uppercase text-[11px]">${escapeHtml(b.cut)}</div>
+          `;
+          body.style.opacity = '1';
+        }, 160);
+      }
+      document.querySelectorAll('.hero-beat-btn').forEach((btn, i) => {
+        btn.className = i === heroBeatIdx
+          ? 'hero-beat-btn px-2 py-1 rounded-full font-mono text-[9px] bg-gold text-[#06070A] font-bold transition'
+          : 'hero-beat-btn px-2 py-1 rounded-full font-mono text-[9px] surface-alt text-sec hover:text-main transition';
+      });
+    }
+
+    function startHeroBeatCycle() {
+      selectHeroBeat(0);
+      if (heroBeatTimer) clearInterval(heroBeatTimer);
+      heroBeatTimer = setInterval(() => selectHeroBeat(heroBeatIdx + 1), 6500);
+    }
+
+    // =========================================================================
+    // 4. BANNER LOGOS MARQUEE & 3D-TILT POSTER GALLERY
+    // =========================================================================
+    function renderBannerMarquee() {
+      const track = document.getElementById('banner-marquee-track');
+      if (!track) return;
+      const items = [...BANNERS_WORKED, ...BANNERS_WORKED];
+      track.innerHTML = items.map(b => `
+        <button type="button" onclick="jumpToBannerCredits('${b.cat}')" data-cursor="CREDITS"
+                class="surface-card rounded-2xl px-5 py-3.5 flex items-center gap-3.5 shrink-0 hover:border-str transition group">
+          <div class="w-10 h-10 rounded-xl bg-gold-soft border border-str flex items-center justify-center font-cinzel text-xs font-bold text-gold-bright group-hover:scale-105 transition">
+            ${b.monogram}
+          </div>
+          <div class="text-left">
+            <div class="font-cinzel text-xs sm:text-sm font-semibold tracking-wider text-main group-hover:text-gold-bright transition">${b.name}</div>
+            <div class="font-mono text-[9px] uppercase tracking-wider text-mut mt-0.5">${b.sub}</div>
+          </div>
+        </button>
+      `).join('');
+    }
+
+    function jumpToBannerCredits(cat) {
+      navigateToSection('career');
+      switchProfileTab('filmography');
+      filterCareer(cat);
+    }
+
+    function renderPosterGallery() {
+      const grid = document.getElementById('poster-gallery');
+      if (!grid) return;
+      grid.innerHTML = POSTER_SLATE.map(p => `
+        <button type="button" onclick="openDossierModal('${p.id}')" data-cursor="DOSSIER"
+                class="poster-tilt-card surface-card rounded-[1.75rem] overflow-hidden text-left group border border-sub hover:border-str">
+          <div class="poster-sheen"></div>
+          <div class="relative aspect-[3/4] w-full overflow-hidden"
+               style="background: radial-gradient(circle at 50% 34%, ${p.palette[1]} 0%, ${p.palette[0]} 78%);">
+            <svg viewBox="0 0 300 400" class="w-full h-full block" xmlns="http://www.w3.org/2000/svg">
+              <!-- Subtle Anamorphic Frame -->
+              <rect x="14" y="14" width="272" height="372" rx="14" fill="none" stroke="${p.palette[2]}" stroke-opacity="0.22" stroke-width="1"/>
+              <text x="150" y="42" text-anchor="middle" fill="${p.palette[2]}" font-family="JetBrains Mono" font-size="8.5" letter-spacing="2.4" opacity="0.9">${p.format} · ${p.year}</text>
+              ${p.motif}
+              <!-- Bottom Theatrical Title Block -->
+              <line x1="56" y1="264" x2="244" y2="264" stroke="${p.palette[2]}" stroke-opacity="0.35"/>
+              <text x="150" y="298" text-anchor="middle" fill="#F4EFE6" font-family="Cinzel,Georgia,serif" font-size="23" font-weight="700" letter-spacing="2.5">${p.title}</text>
+              ${p.subtitle ? `<text x="150" y="318" text-anchor="middle" fill="${p.palette[2]}" font-family="JetBrains Mono" font-size="9.5" letter-spacing="2.4">${p.subtitle}</text>` : ''}
+              <text x="150" y="348" text-anchor="middle" fill="#B9B2A6" font-family="JetBrains Mono" font-size="7.5" letter-spacing="1.6">${p.tagline}</text>
+              <text x="150" y="370" text-anchor="middle" fill="${p.palette[3]}" font-family="JetBrains Mono" font-size="8" letter-spacing="1.2">${p.role.toUpperCase()}</text>
+            </svg>
+          </div>
+          <div class="p-4 flex items-center justify-between gap-2 border-t border-sub">
+            <div class="truncate">
+              <div class="font-serif text-lg font-semibold text-main leading-tight truncate">${p.title}</div>
+              <div class="font-mono text-[10px] text-mut truncate mt-0.5">${p.banner}</div>
+            </div>
+            <span class="shrink-0 font-mono text-[10px] text-gold-bright group-hover:translate-x-0.5 transition">Dossier →</span>
+          </div>
+        </button>
+      `).join('');
+
+      // Attach smooth 3D cursor-tracking tilt
+      if (window.matchMedia('(hover: hover)').matches) {
+        grid.querySelectorAll('.poster-tilt-card').forEach(card => {
+          card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const px = (e.clientX - rect.left) / rect.width;
+            const py = (e.clientY - rect.top) / rect.height;
+            const rotY = (px - 0.5) * 11;
+            const rotX = (0.5 - py) * 11;
+            card.style.transform = `perspective(900px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-4px)`;
+            card.style.setProperty('--mx', `${px * 100}%`);
+            card.style.setProperty('--my', `${py * 100}%`);
+          });
+          card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+          });
+        });
+      }
+    }
+
+    // =========================================================================
+    // 5. VISHWAKARMA HAMMER CURSOR (STRIKE + SPARKS ON CLICK)
+    // =========================================================================
+    function initVishwakarmaCursor() {
+      if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+      document.body.classList.add('has-vk-cursor');
+      const cur = document.getElementById('vk-cursor');
+      const ring = document.getElementById('vk-cursor-ring');
+      const lbl = document.getElementById('vk-cursor-label');
+      let mx = -100, my = -100, rx = -100, ry = -100;
+
+      window.addEventListener('mousemove', (e) => {
+        mx = e.clientX; my = e.clientY;
+        cur.style.transform = `translate3d(${mx - 8}px, ${my - 8}px, 0)`;
+        const t = e.target.closest('[data-cursor]');
+        if (t) {
+          lbl.textContent = t.getAttribute('data-cursor');
+          ring.classList.add('is-labeled');
+          cur.classList.add('is-hovering');
+        } else {
+          ring.classList.remove('is-labeled');
+          cur.classList.remove('is-hovering');
+        }
+      });
+
+      window.addEventListener('mousedown', (e) => {
+        cur.classList.add('is-striking');
+        emitStrikeSparks(e.clientX, e.clientY);
+        setTimeout(() => cur.classList.remove('is-striking'), 170);
+      });
+
+      (function loop() {
+        rx += (mx - rx) * 0.18;
+        ry += (my - ry) * 0.18;
+        const off = ring.classList.contains('is-labeled') ? 36 : 19;
+        ring.style.transform = `translate3d(${rx - off}px, ${ry - off}px, 0)`;
+        requestAnimationFrame(loop);
+      })();
+    }
+
+    function emitStrikeSparks(x, y) {
+      const wave = document.createElement('div');
+      wave.className = 'vk-shockwave';
+      wave.style.left = x + 'px';
+      wave.style.top = y + 'px';
+      document.body.appendChild(wave);
+      setTimeout(() => wave.remove(), 460);
+
+      for (let i = 0; i < 7; i++) {
+        const sp = document.createElement('div');
+        sp.className = 'vk-spark';
+        const ang = (Math.PI * 2 * i) / 7 + (Math.random() - 0.5) * 0.5;
+        const dist = 16 + Math.random() * 24;
+        const size = 2.5 + Math.random() * 2.5;
+        sp.style.left = x + 'px';
+        sp.style.top = y + 'px';
+        sp.style.width = size + 'px';
+        sp.style.height = size + 'px';
+        sp.style.backgroundColor = i % 3 === 0 ? '#7CC6D4' : '#E8CA86';
+        sp.style.setProperty('--tx', `${Math.cos(ang) * dist}px`);
+        sp.style.setProperty('--ty', `${Math.sin(ang) * dist}px`);
+        document.body.appendChild(sp);
+        setTimeout(() => sp.remove(), 540);
+      }
+    }
+
+    // =========================================================================
+    // 6. 10-SECOND CINEMATIC INTRO CONTROLLER
+    // =========================================================================
+    const INTRO_CAPTIONS = [
+      'Handcrafted & Unveiled — Entering the Studio…',
+      'Lord Vishwakarma · Cosmic Architecture Meets Cinema',
+      'Goodachari · Baahubali · Parampara Seasons 1 & 2',
+      'Vishwakarma Creations · Hyderabad'
+    ];
+    let introTimer = null;
+    let introStartMs = 0;
+
+    function initCinematicIntro() {
+      const introEl = document.getElementById('cinematic-intro');
+      const videoEl = document.getElementById('intro-video');
+      const simEl = document.getElementById('intro-sim-camera');
+      if (!introEl) return;
+
+      if (videoEl) {
+        videoEl.oncanplay = () => {
+          videoEl.classList.remove('hidden');
+          if (simEl) simEl.classList.add('hidden');
+          videoEl.play().catch(() => {});
+        };
+        videoEl.onended = () => skipCinematicIntro();
+        videoEl.load();
+      }
+      startIntroTimeline();
+    }
+
+    function startIntroTimeline() {
+      const bar = document.getElementById('intro-progress-bar');
+      const timerLabel = document.getElementById('intro-timer-label');
+      const captionEl = document.getElementById('intro-caption');
+      introStartMs = performance.now();
+      if (introTimer) clearInterval(introTimer);
+
+      introTimer = setInterval(() => {
+        const elapsed = (performance.now() - introStartMs) / 1000;
+        const pct = Math.min((elapsed / 10) * 100, 100);
+        if (bar) bar.style.width = pct + '%';
+        if (timerLabel) timerLabel.textContent = `00:${String(Math.min(Math.floor(elapsed), 10)).padStart(2, '0')} / 00:10`;
+        if (captionEl) {
+          const idx = Math.min(Math.floor(elapsed / 2.5), INTRO_CAPTIONS.length - 1);
+          captionEl.textContent = INTRO_CAPTIONS[idx];
+        }
+        if (elapsed >= 10) skipCinematicIntro();
+      }, 80);
+    }
+
+    function handleIntroStageClick() {
+      unlockAmbientSoundtrack();
+      skipCinematicIntro();
+    }
+
+    function skipCinematicIntro() {
+      if (introTimer) { clearInterval(introTimer); introTimer = null; }
+      const introEl = document.getElementById('cinematic-intro');
+      const videoEl = document.getElementById('intro-video');
+      if (videoEl) { try { videoEl.pause(); } catch (e) {} }
+      if (!introEl || introEl.classList.contains('is-done')) return;
+      introEl.classList.add('is-exiting');
+      setTimeout(() => introEl.classList.add('is-done'), 800);
+    }
+
+    function replayCinematicIntro() {
+      const introEl = document.getElementById('cinematic-intro');
+      const videoEl = document.getElementById('intro-video');
+      const simEl = document.getElementById('intro-sim-camera');
+      if (!introEl) return;
+      introEl.classList.remove('is-done', 'is-exiting');
+      if (videoEl && !videoEl.classList.contains('hidden')) {
+        videoEl.currentTime = 0;
+        videoEl.play().catch(() => {});
+      } else if (simEl) {
+        simEl.style.animation = 'none';
+        void simEl.offsetWidth;
+        simEl.style.animation = 'introCameraTour 10s ease-in-out forwards';
+      }
+      startIntroTimeline();
+    }
+
+    // =========================================================================
+    // 7. INVISIBLE SINGLE-TRACK SOUNDTRACK (OPTIONAL MP3 OR DWARVEN BASS CHORUS)
+    // =========================================================================
+    let audioUnlocked = false;
+    let dwarfCtx = null;
+    let dwarfGain = null;
+
+    function unlockAmbientSoundtrack() {
+      if (audioUnlocked) return;
+      audioUnlocked = true;
+      const audioEl = document.getElementById('bg-music-el');
+      if (audioEl) {
+        audioEl.volume = 0.28;
+        const p = audioEl.play();
+        if (p && typeof p.catch === 'function') p.catch(() => startDwarvenChorusSynth());
+      } else {
+        startDwarvenChorusSynth();
+      }
+    }
+
+    function startDwarvenChorusSynth() {
+      if (dwarfCtx) return;
+      const AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return;
+      dwarfCtx = new AC();
+
+      dwarfGain = dwarfCtx.createGain();
+      dwarfGain.gain.setValueAtTime(0.0001, dwarfCtx.currentTime);
+      dwarfGain.gain.exponentialRampToValueAtTime(0.24, dwarfCtx.currentTime + 2.8);
+
+      const conv = dwarfCtx.createConvolver();
+      const len = Math.floor(dwarfCtx.sampleRate * 3.4);
+      const ir = dwarfCtx.createBuffer(2, len, dwarfCtx.sampleRate);
+      for (let ch = 0; ch < 2; ch++) {
+        const d = ir.getChannelData(ch);
+        for (let i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 2.6);
+      }
+      conv.buffer = ir;
+
+      const dry = dwarfCtx.createGain(); dry.gain.value = 0.45;
+      const wet = dwarfCtx.createGain(); wet.gain.value = 0.65;
+      dwarfGain.connect(dry); dry.connect(dwarfCtx.destination);
+      dwarfGain.connect(conv); conv.connect(wet); wet.connect(dwarfCtx.destination);
+
+      [36.71, 55.0, 73.42].forEach((freq, i) => {
+        const osc = dwarfCtx.createOscillator();
+        const f = dwarfCtx.createBiquadFilter();
+        const g = dwarfCtx.createGain();
+        osc.type = i === 0 ? 'sine' : 'sawtooth';
+        osc.frequency.value = freq;
+        f.type = 'lowpass'; f.frequency.value = 180;
+        g.gain.value = i === 0 ? 0.22 : 0.06;
+        osc.connect(f); f.connect(g); g.connect(dwarfGain);
+        osc.start();
+      });
+
+      const phrase = [
+        { f: 73.42, d: 3.4 }, { f: 87.31, d: 3.0 }, { f: 82.41, d: 3.2 },
+        { f: 73.42, d: 3.6 }, { f: 65.41, d: 3.2 }, { f: 73.42, d: 4.2 }
+      ];
+      let step = 0;
+
+      function singNote() {
+        if (!dwarfCtx || dwarfCtx.state === 'suspended') return;
+        const note = phrase[step % phrase.length];
+        step++;
+        const now = dwarfCtx.currentTime;
+        const dur = note.d;
+
+        [-5, 0, 6].forEach((cents) => {
+          const osc = dwarfCtx.createOscillator();
+          osc.type = 'sawtooth';
+          osc.frequency.setValueAtTime(note.f * Math.pow(2, cents / 1200), now);
+          const f1 = dwarfCtx.createBiquadFilter();
+          f1.type = 'bandpass'; f1.frequency.setValueAtTime(320, now); f1.Q.value = 3.2;
+          const f2 = dwarfCtx.createBiquadFilter();
+          f2.type = 'lowpass'; f2.frequency.setValueAtTime(640, now);
+          const env = dwarfCtx.createGain();
+          env.gain.setValueAtTime(0.0001, now);
+          env.gain.linearRampToValueAtTime(0.11, now + 0.9);
+          env.gain.setValueAtTime(0.095, now + dur - 0.9);
+          env.gain.exponentialRampToValueAtTime(0.0001, now + dur + 0.4);
+          osc.connect(f1); f1.connect(f2); f2.connect(env); env.connect(dwarfGain);
+          osc.start(now);
+          osc.stop(now + dur + 0.5);
+        });
+        setTimeout(singNote, dur * 1000);
+      }
+      singNote();
+    }
+
+    document.addEventListener('visibilitychange', () => {
+      const audioEl = document.getElementById('bg-music-el');
+      if (document.hidden) {
+        if (audioEl && !audioEl.paused) audioEl.pause();
+        if (dwarfCtx && dwarfCtx.state === 'running') dwarfCtx.suspend();
+      } else if (audioUnlocked) {
+        if (audioEl && audioEl.readyState >= 2) audioEl.play().catch(() => {});
+        if (dwarfCtx && dwarfCtx.state === 'suspended') dwarfCtx.resume();
+      }
+    });
+
+    // =========================================================================
+    // 8. NAVIGATION, THEME, FULLSCREEN & CREST FOCUS
+    // =========================================================================
+    function navigateToSection(id) {
+      if (id === 'top') { window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'paper' ? 'screening' : 'paper';
+      html.setAttribute('data-theme', next);
+      const label = document.getElementById('theme-label');
+      if (label) label.textContent = next === 'paper' ? 'Screening Room' : 'Script Paper';
+      showToast(next === 'paper' ? 'Script Paper Mode' : 'Screening Room Mode');
+    }
+
+    function toggleFullscreenMode() {
+      const docEl = document.documentElement;
+      const isFs = document.fullscreenElement || document.webkitFullscreenElement;
+      try {
+        if (!isFs) {
+          const req = docEl.requestFullscreen || docEl.webkitRequestFullscreen;
+          if (req) {
+            const p = req.call(docEl);
+            if (p && typeof p.catch === 'function') p.catch(() => showToast('Fullscreen is restricted inside embedded Preview'));
+          }
+        } else {
+          const ex = document.exitFullscreen || document.webkitExitFullscreen;
+          if (ex) ex.call(document);
+        }
+      } catch (e) {
+        showToast('Fullscreen is restricted inside embedded Preview');
+      }
+    }
+
+    function toggleCrestFocus() {
+      const active = document.body.classList.toggle('crest-focus');
+      const btn = document.getElementById('crest-toggle-btn');
+      if (btn) btn.textContent = active ? 'Return to Page' : 'View Studio Crest';
+    }
+
+    function toggleEditorialMenu() {
+      const menu = document.getElementById('editorial-menu');
+      const open = menu.classList.toggle('is-open');
+      document.getElementById('menu-btn-text').textContent = open ? 'Close' : 'Menu';
+      document.getElementById('mb-1').style.transform = open ? 'translateY(3px) rotate(45deg)' : '';
+      document.getElementById('mb-2').style.transform = open ? 'translateY(-3px) rotate(-45deg)' : '';
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function menuJump(id) {
+      toggleEditorialMenu();
+      setTimeout(() => navigateToSection(id), 260);
+    }
+
+    // =========================================================================
+    // 9. 3-TAB EXECUTIVE PORTFOLIO & PRODUCTION DOSSIER
+    // =========================================================================
+    function switchProfileTab(tab) {
+      ['about', 'filmography', 'awards'].forEach(t => {
+        const panel = document.getElementById(`tab-panel-${t}`);
+        const btn = document.getElementById(`tab-btn-${t}`);
+        if (panel) panel.classList.toggle('hidden', t !== tab);
+        if (btn) {
+          btn.className = t === tab
+            ? 'profile-tab px-4 py-2.5 rounded-full font-mono text-xs uppercase tracking-wider bg-gold text-[#06070A] font-bold transition'
+            : 'profile-tab px-4 py-2.5 rounded-full font-mono text-xs uppercase tracking-wider surface-alt text-sec hover:text-main transition';
+        }
+      });
+    }
+
+    function filterCareer(cat) {
+      document.querySelectorAll('.career-pill').forEach(btn => {
+        const active = btn.dataset.cat === cat;
+        btn.className = active
+          ? 'career-pill px-3.5 py-1.5 rounded-full font-mono text-[11px] bg-gold text-[#06070A] font-bold'
+          : 'career-pill px-3.5 py-1.5 rounded-full font-mono text-[11px] surface-alt text-sec hover:text-main';
+      });
+      const list = cat === 'all' ? CAREER_CREDITS : CAREER_CREDITS.filter(c => c.cat === cat);
+      const grid = document.getElementById('career-grid');
+      if (!grid) return;
+      grid.innerHTML = list.map(c => `
+        <button type="button" onclick="openDossierModal('${c.id}')" data-cursor="DOSSIER"
+                class="surface-card rounded-2xl p-5 text-left hover:border-str transition flex flex-col justify-between gap-3">
+          <div class="space-y-1.5">
+            <div class="flex items-center justify-between gap-2 font-mono text-[10px]">
+              <span class="text-gold-bright">${c.year} · ${c.format}</span>
+              <span class="px-2 py-0.5 rounded-full bg-gold-soft text-gold-bright">${c.tag}</span>
+            </div>
+            <h4 class="font-serif text-2xl font-semibold text-main leading-snug">${c.title}</h4>
+            <div class="text-xs text-sec">${c.banner}</div>
+          </div>
+          <div class="pt-2 border-t border-sub flex items-center justify-between font-mono text-[10px]">
+            <span class="text-cyan">${c.role}</span>
+            <span class="text-mut">Open Dossier →</span>
+          </div>
+        </button>
+      `).join('');
+    }
+
+    function openDossierModal(id) {
+      const item = CAREER_CREDITS.find(c => c.id === id);
+      if (!item) return;
+      document.getElementById('dossier-tag').textContent = `${item.year} · ${item.format} · ${item.tag}`;
+      document.getElementById('dossier-title').textContent = item.title;
+      document.getElementById('dossier-body').innerHTML = `
+        <div class="grid sm:grid-cols-2 gap-3 font-mono text-xs">
+          <div class="surface-alt rounded-xl p-3.5"><div class="text-[10px] text-mut">PRODUCTION / PLATFORM</div><div class="text-main mt-1">${escapeHtml(item.banner)}</div></div>
+          <div class="surface-alt rounded-xl p-3.5"><div class="text-[10px] text-mut">CREDIT ROLE</div><div class="text-gold-bright mt-1">${escapeHtml(item.role)}</div></div>
+        </div>
+        <p class="text-sm text-sec leading-relaxed">${escapeHtml(item.summary)}</p>
+        <div class="flex flex-wrap gap-3 pt-2">
+          ${item.link ? `<a href="${item.link}" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full border border-str font-mono text-xs text-main hover:border-[var(--gold-bright)] transition">${escapeHtml(item.linkLabel)} ↗</a>` : ''}
+          <button type="button" onclick="closeDossierModal(); openPitchModal('${escapeHtml(item.role)}');" class="px-5 py-2.5 rounded-full bg-gold text-[#06070A] font-mono text-xs font-bold uppercase tracking-wider">Enquire Similar Project →</button>
+        </div>
+      `;
+      const m = document.getElementById('dossier-modal');
+      m.classList.remove('hidden'); m.classList.add('flex');
+    }
+
+    function closeDossierModal() {
+      const m = document.getElementById('dossier-modal');
+      m.classList.add('hidden'); m.classList.remove('flex');
+    }
+
+    function filterAwards(res) {
+      document.querySelectorAll('.award-pill').forEach(btn => {
+        const active = btn.dataset.aw === res;
+        btn.className = active
+          ? 'award-pill px-3.5 py-1.5 rounded-full font-mono text-[11px] bg-gold text-[#06070A] font-bold'
+          : 'award-pill px-3.5 py-1.5 rounded-full font-mono text-[11px] surface-alt text-sec hover:text-main';
+      });
+      const list = res === 'all' ? FESTIVAL_AWARDS : FESTIVAL_AWARDS.filter(a => a.result === res);
+      const grid = document.getElementById('awards-grid');
+      if (!grid) return;
+      grid.innerHTML = list.map(a => `
+        <div class="surface-card rounded-2xl p-4 flex items-start justify-between gap-3">
+          <div class="space-y-1">
+            <div class="font-mono text-[10px] text-gold-bright">${a.year} · ${a.title}</div>
+            <div class="font-serif text-lg font-semibold text-main leading-snug">${a.festival}</div>
+          </div>
+          <span class="shrink-0 font-mono text-[10px] px-2.5 py-1 rounded-full ${a.result === 'Won' ? 'bg-gold-soft text-gold-bright' : 'surface-alt text-sec'}">${a.result === 'Won' ? '🏆 Won' : '★ ' + a.title}</span>
+        </div>
+      `).join('');
+    }
+
+    // =========================================================================
+    // 10. CRAFT SHOWCASE, SCRIPT LAB, SCENE INSPECTOR & PROJECT ENQUIRY
+    // =========================================================================
+    let activeCraft = '01';
+    function renderCrafts() {
+      const list = document.getElementById('craft-list');
+      if (!list) return;
+      list.innerHTML = CRAFTS.map(c => `
+        <button type="button" onclick="selectCraft('${c.idx}')" onmouseenter="selectCraft('${c.idx}')" data-cursor="VIEW"
+                class="craft-row w-full py-5 px-2 flex items-center justify-between gap-4 text-left ${c.idx === activeCraft ? 'is-active' : ''}">
+          <div class="flex items-baseline gap-4">
+            <span class="font-mono text-xs text-gold-bright">${c.idx}</span>
+            <span class="font-serif text-2xl sm:text-3xl text-main">${c.name}</span>
+          </div>
+          <span class="font-mono text-[10px] uppercase tracking-wider text-mut hidden sm:inline">${c.turnaround}</span>
+        </button>
+      `).join('');
+      updateCraftPreview(activeCraft);
+    }
+
+    function selectCraft(idx) {
+      activeCraft = idx;
+      document.querySelectorAll('.craft-row').forEach(r => {
+        const i = r.querySelector('span').textContent.trim();
+        r.classList.toggle('is-active', i === idx);
+      });
+      updateCraftPreview(idx);
+    }
+
+    function updateCraftPreview(idx) {
+      const c = CRAFTS.find(x => x.idx === idx) || CRAFTS[0];
+      const box = document.getElementById('craft-preview');
+      if (!box) return;
+      box.innerHTML = `
+        <div class="flex items-center justify-between font-mono text-[10px]">
+          <span class="text-gold-bright uppercase tracking-widest">Service ${c.idx} / 06</span>
+          <span class="px-2.5 py-1 rounded-full bg-cyan-soft text-cyan">${c.turnaround}</span>
+        </div>
+        <h3 class="font-serif text-3xl font-semibold text-main">${c.name}</h3>
+        <p class="text-sm text-sec leading-relaxed">${c.desc}</p>
+        <div class="space-y-2 pt-1">
+          <div class="font-mono text-[10px] uppercase tracking-wider text-mut">Deliverables</div>
+          <div class="flex flex-wrap gap-2">
+            ${c.deliverables.map(d => `<span class="px-3 py-1 rounded-full surface-alt text-xs text-main">${d}</span>`).join('')}
+          </div>
+        </div>
+        <button type="button" onclick="openPitchModal('${escapeHtml(c.name)}')" data-cursor="ENQUIRE"
+                class="w-full py-3 rounded-full bg-gold hover:bg-[#E8CA86] text-[#06070A] font-mono text-xs font-bold uppercase tracking-wider transition">
+          Enquire About ${c.name} →
+        </button>
+      `;
+    }
+
+    let labState = { format: 'Feature Film', genre: 'Thriller / Spy' };
+    const LAB_FORMATS = ['Feature Film', 'OTT Series', 'Pan-India Epic', 'Short / Proof'];
+    const LAB_GENRES = ['Thriller / Spy', 'Political Drama', 'Mythic / Period', 'Crime / Noir', 'Satire / Comedy', 'Sci-Fi / High Concept'];
+
+    function initScriptLab() {
+      const fBox = document.getElementById('lab-format-btns');
+      const gBox = document.getElementById('lab-genre-btns');
+      if (fBox) {
+        fBox.innerHTML = LAB_FORMATS.map(f => `
+          <button type="button" onclick="setLabFormat('${f}')" class="px-3 py-2 rounded-xl border font-mono text-xs transition ${labState.format === f ? 'border-str bg-gold-soft text-gold-bright' : 'border-sub surface-alt text-sec'}">${f}</button>
+        `).join('');
+      }
+      if (gBox) {
+        gBox.innerHTML = LAB_GENRES.map(g => `
+          <button type="button" onclick="setLabGenre('${g}')" class="px-2.5 py-2 rounded-xl border font-mono text-[11px] transition ${labState.genre === g ? 'border-str bg-gold-soft text-gold-bright' : 'border-sub surface-alt text-sec'}">${g}</button>
+        `).join('');
+      }
+      renderLabOutput();
+    }
+    function setLabFormat(f) { labState.format = f; initScriptLab(); }
+    function setLabGenre(g) { labState.genre = g; initScriptLab(); }
+
+    function renderLabOutput() {
+      const issue = document.getElementById('lab-issue')?.value || 'act2';
+      const prescriptions = {
+        act2: { time: '2–3 Weeks', focus: 'Midpoint & Interval Re-Engineering', steps: ['Audit pages 35–75 for redundant exposition and flat turns.', 'Anchor a high-consequence midpoint reversal that forces the protagonist onto offense.', 'Sharpen the pre-interval escalation so the second half launches with urgency.'] },
+        character: { time: '2–4 Weeks', focus: 'Protagonist Agency & Antagonist Mirroring', steps: ['Rebuild the lead’s central flaw so external plot obstacles attack it directly.', 'Elevate the antagonist’s philosophy to create ideological friction.', 'Strip passive reaction scenes and convert them into active choices.'] },
+        pacing: { time: '3–4 Weeks', focus: 'Hook Density & Episode Cliffhanger Rhythm', steps: ['Recut the opening 10 minutes to establish world rules and stakes visually.', 'Map 12-minute micro-tension peaks and episode-ending hook turns.', 'Eliminate redundant recap dialogue in favor of kinetic scene transitions.'] },
+        climax: { time: '2 Weeks', focus: 'Third-Act Payoff & Catharsis', steps: ['Cross-check every Act 1 setup to guarantee an earned Act 3 payoff.', 'Raise personal stakes alongside spectacle in the final confrontation.', 'Tighten the denouement to exit on the strongest emotional image.'] },
+        concept: { time: '6–8 Weeks', focus: 'Full Story Bible & Screenplay Architecture', steps: ['Develop a studio-ready logline, world rules, and character constellation.', 'Construct a scene-by-scene beat sheet with tonal & pacing benchmarks.', 'Execute the complete Courier Prime screenplay or OTT pilot teleplay.'] }
+      };
+      const p = prescriptions[issue] || prescriptions.act2;
+      const badge = document.getElementById('lab-timeline-badge');
+      const out = document.getElementById('lab-output');
+      if (badge) badge.textContent = p.time;
+      if (out) {
+        out.innerHTML = `
+          <div class="font-mono text-xs text-cyan">${labState.format} · ${labState.genre}</div>
+          <h3 class="font-serif text-2xl sm:text-3xl font-semibold text-main">${p.focus}</h3>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-sec">
+            ${p.steps.map((s, i) => `<li class="flex gap-3"><span class="font-mono text-gold-bright">0${i + 1}</span><span>${s}</span></li>`).join('')}
+          </ul>
+        `;
+      }
+    }
+
+    function sendBlueprintToEnquiry() {
+      const issueLabel = document.getElementById('lab-issue')?.selectedOptions?.[0]?.text || '';
+      openPitchModal('Script Doctoring & Punch-Up');
+      const brief = document.getElementById('pitch-brief');
+      if (brief) brief.value = `Diagnostic Blueprint Request — Format: ${labState.format} | Genre: ${labState.genre} | Focus: ${issueLabel}`;
+    }
+
+    let activeBeat = '01';
+    function renderSceneInspector() {
+      const list = document.getElementById('scene-beats-list');
+      if (!list) return;
+      list.innerHTML = SCENE_BEATS.map(b => `
+        <button type="button" onclick="selectBeat('${b.idx}')"
+                class="scene-beat w-full text-left p-3.5 rounded-xl ${b.idx === activeBeat ? 'is-active' : ''}">
+          <div class="font-mono text-[9px] uppercase tracking-wider text-mut mb-1">${b.idx} · ${b.type}</div>
+          <div class="whitespace-pre-line ${b.type === 'SLUGLINE' ? 'font-bold text-main' : b.type === 'DIALOGUE' ? 'pl-5 sm:pl-8 text-main' : 'text-sec'}">${escapeHtml(b.text)}</div>
+        </button>
+      `).join('');
+      const current = SCENE_BEATS.find(x => x.idx === activeBeat) || SCENE_BEATS[0];
+      const panel = document.getElementById('scene-note-panel');
+      if (panel) {
+        panel.innerHTML = `
+          <div class="font-mono text-[10px] uppercase tracking-[0.2em] text-gold-bright">Writer’s Margin Note · Beat ${current.idx}</div>
+          <h3 class="font-serif text-3xl font-semibold text-main">${current.noteTitle}</h3>
+          <p class="text-sm text-sec leading-relaxed">${current.note}</p>
+          <div class="pt-3 border-t border-sub font-mono text-[11px] text-mut">Craft Principle: Economy of language · Maximum subtext</div>
+        `;
+      }
+    }
+    function selectBeat(idx) { activeBeat = idx; renderSceneInspector(); }
+
+    const PITCH_SERVICES = [
+      'Feature Film Screenwriting',
+      'OTT Series Architecture & Bibles',
+      'Script Doctoring & Punch-Up',
+      'Direction & Creative Supervision',
+      'Dialogue & Cultural Adaptation',
+      'Pitch Decks & Studio Lookbooks'
+    ];
+    let selectedPitchService = PITCH_SERVICES[0];
+
+    function renderPitchServices() {
+      const g = document.getElementById('pitch-service-grid');
+      if (!g) return;
+      g.innerHTML = PITCH_SERVICES.map(s => `
+        <button type="button" onclick="selectPitchService('${escapeHtml(s)}')"
+                class="text-left px-3.5 py-2.5 rounded-xl border text-xs font-medium transition ${selectedPitchService === s ? 'border-str bg-gold-soft text-main' : 'border-sub surface-alt text-sec'}">
+          ${s}
+        </button>
+      `).join('');
+    }
+    function selectPitchService(s) { selectedPitchService = s; renderPitchServices(); }
+
+    function openPitchModal(preService) {
+      if (preService) {
+        const match = PITCH_SERVICES.find(x => x.toLowerCase().includes(preService.toLowerCase()));
+        if (match) selectedPitchService = match;
+      }
+      renderPitchServices();
+      setPitchStep(1);
+      const m = document.getElementById('pitch-modal');
+      m.classList.remove('hidden'); m.classList.add('flex');
+    }
+    function closePitchModal() {
+      const m = document.getElementById('pitch-modal');
+      m.classList.add('hidden'); m.classList.remove('flex');
+    }
+    function setPitchStep(step) {
+      [1, 2, 3, 4].forEach(s => {
+        const el = document.getElementById(`pitch-step-${s}`);
+        if (el) el.classList.toggle('hidden', s !== step);
+      });
+      const labels = {
+        1: 'Step 01 / 03 · Select Service & Format',
+        2: 'Step 02 / 03 · Project Details & NDA',
+        3: 'Step 03 / 03 · Your Contact Details',
+        4: 'Enquiry Confirmed · Studio Desk Notified'
+      };
+      const pcts = { 1: '33%', 2: '66%', 3: '92%', 4: '100%' };
+      document.getElementById('pitch-step-label').textContent = labels[step];
+      document.getElementById('pitch-progress').style.width = pcts[step];
+    }
+
+    function completePitch() {
+      const name = document.getElementById('pitch-name').value.trim();
+      const phone = document.getElementById('pitch-phone').value.trim();
+      const email = document.getElementById('pitch-email').value.trim();
+      const err = document.getElementById('pitch-err');
+      if (!name || !phone || !email) {
+        err.textContent = 'Please complete your name, mobile/WhatsApp, and email.';
+        err.classList.remove('hidden');
+        return;
+      }
+      err.classList.add('hidden');
+
+      const refId = 'VC-2026-' + Math.floor(1000 + Math.random() * 9000);
+      const format = document.getElementById('pitch-format').value;
+      const title = document.getElementById('pitch-title').value.trim() || 'Untitled Project';
+      const brief = document.getElementById('pitch-brief').value.trim() || 'To be discussed over call.';
+      const nda = document.getElementById('pitch-nda').checked ? 'Requested' : 'Not Required';
+
+      try {
+        fetch('https://formsubmit.co/ajax/venkat.penubothu@gmail.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            _subject: `New Project Enquiry [${refId}] — ${selectedPitchService}`,
+            Reference_ID: refId,
+            Service: selectedPitchService,
+            Format: format,
+            Project_Title: title,
+            Client_Name: name,
+            Phone_WhatsApp: phone,
+            Client_Email: email,
+            NDA_Preference: nda,
+            Brief: brief
+          })
+        }).catch(() => {});
+      } catch (e) {}
+
+      document.getElementById('pitch-ref-out').textContent = refId;
+      document.getElementById('pitch-confirm-text').innerHTML =
+        `Thank you, <strong class="text-main">${escapeHtml(name)}</strong>. Your enquiry for <strong class="text-gold-bright">${escapeHtml(selectedPitchService)}</strong> (${escapeHtml(format)}) has been logged with Vishwakarma Creations. Venkat’s desk will respond shortly.`;
+
+      const mailBody = encodeURIComponent(`Ref: ${refId}\nService: ${selectedPitchService}\nFormat: ${format}\nTitle: ${title}\nClient: ${name} (${phone} / ${email})\nNDA: ${nda}\nBrief: ${brief}`);
+      document.getElementById('pitch-mailto-link').href = `mailto:venkat.penubothu@gmail.com?subject=${encodeURIComponent('Project Enquiry ' + refId)}&body=${mailBody}`;
+      document.getElementById('pitch-wa-link').href = `https://wa.me/917989953118?text=${mailBody}`;
+
+      setPitchStep(4);
+    }
+
+    // =========================================================================
+    // 11. KINETIC TEXT, SCROLL OBSERVERS & UTILITIES
+    // =========================================================================
+    function initKineticText() {
+      document.querySelectorAll('.kinetic-text').forEach(el => {
+        if (el.dataset.ready) return;
+        const txt = el.textContent.trim();
+        el.dataset.ready = '1';
+        el.classList.add('kinetic-wrap');
+        el.setAttribute('aria-label', txt);
+        el.innerHTML = '';
+        Array.from(txt).forEach((ch, idx) => {
+          const s = document.createElement('span');
+          s.className = 'kinetic-char';
+          const c = ch === ' ' ? '\u00A0' : ch;
+          s.textContent = c;
+          s.setAttribute('data-char', c);
+          s.style.transitionDelay = `${Math.min(idx * 14, 220)}ms`;
+          el.appendChild(s);
+        });
+      });
+    }
+
+    function initScrollObservers() {
+      const bar = document.getElementById('scroll-progress');
+      window.addEventListener('scroll', () => {
+        const h = document.documentElement.scrollHeight - window.innerHeight;
+        if (bar) bar.style.width = (h > 0 ? Math.min((window.scrollY / h) * 100, 100) : 0) + '%';
+      }, { passive: true });
+
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(en => {
+          if (en.isIntersecting) {
+            en.target.classList.add('in-view');
+            obs.unobserve(en.target);
+          }
+        });
+      }, { threshold: 0.08 });
+
+      document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+      setTimeout(() => document.querySelectorAll('.reveal').forEach(el => el.classList.add('in-view')), 1400);
+    }
+
+    let toastTimer = null;
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      if (!t) return;
+      t.textContent = msg;
+      t.classList.remove('hidden');
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => t.classList.add('hidden'), 2600);
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+    }
+
+    // =========================================================================
+    // 12. FAILSAFE BOOTSTRAP
+    // =========================================================================
+    function initApp() {
+      const safe = (fn) => { try { fn(); } catch (e) {} };
+      safe(mountHighResEmblems);
+      safe(initCinematicIntro);
+      safe(initProjectorMotes);
+      safe(initHeroParallax);
+      safe(startHeroBeatCycle);
+      safe(renderBannerMarquee);
+      safe(renderPosterGallery);
+      safe(initVishwakarmaCursor);
+      safe(initKineticText);
+      safe(initScrollObservers);
+      safe(() => filterCareer('all'));
+      safe(() => filterAwards('all'));
+      safe(renderCrafts);
+      safe(initScriptLab);
+      safe(renderSceneInspector);
+
+      ['pointerdown', 'keydown'].forEach(ev => {
+        window.addEventListener(ev, unlockAmbientSoundtrack, { once: true });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeDossierModal();
+          closePitchModal();
+          if (document.getElementById('editorial-menu')?.classList.contains('is-open')) toggleEditorialMenu();
+        }
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initApp);
+    } else {
+      initApp();
+    }
+  </script>
+</body>
+</html>
